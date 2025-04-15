@@ -22,7 +22,7 @@ def get_personal_data():
     name = ["Zilong", "Chen"]
     bio_text = f"""
                 <p>
-                    I am a Ph.D student at Department of Computer Science and Technology, Tsinghua University, where I am advised by <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Prof. Huaping Liu</a> and work closely with <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a> and <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/web/minnluo/" target="_blank">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.
+                    I am a Ph.D student at Department of Computer Science and Technology, Tsinghua University, where I am advised by <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Prof. Huaping Liu</a> and work closely with <a href="https://wangfeng18.github.io/" target="_blank">Dr. Feng Wang</a> and <a href="https://yikaiw.github.io/" target="_blank">Prof. Yikai Wang</a>. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/web/minnluo/" target="_blank">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.
                 </p>
                 <p>
                     <a href="./assets/ZilongChen_CV_Apr_2025.pdf" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-circle-user"></i> Resume</a>|
@@ -30,7 +30,7 @@ def get_personal_data():
                     <a href="./assets/img/heheyas-wechat.jpg" style="margin-right: 5px"><i class="fab fa-weixin"></i> Wechat</a>|
                     <a href="https://scholar.google.com.hk/citations?user=2pbka1gAAAAJ&hl=en" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>|
                     <a href="https://github.com/heheyas" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>|
-                    <a href="https://github.com/heheyas" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/zilong-chen-99671523b/" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
                 </p>
     """
     footer = """
@@ -257,7 +257,7 @@ def get_index_html():
                 </div>
                 <div class="row" style="margin-top: 1em;">
                     <div class="col-sm-12" style="">
-                        <h4>Selected publications (* indicates equal contribution) [<a href="">Full list</a>] [<a href="">Download bibtex</a>]</h4>
+                        <h4>Selected publications (* indicates equal contribution) [<a href="full_list.html">Full list</a>] [<a href="">Download bibtex</a>]</h4>
                         {pub}
                     </div>
                 </div>
@@ -278,8 +278,8 @@ def get_index_html():
                 <div class="row" style="margin-top: 3em;">
                     <div class="col-sm-12" style="">
                         <h4>Services</h4>
-                        Reviewer for conferences: CVPR, NeurIPS, ICLR, ICML, ICCV, AAAI, ACL, IROS, ICRA</br>
-                        Reviewer for journals: T-PAMI, Neurocomputing, TIP, JMLR</br>
+                        <b>Reviewer for conferences</b>: CVPR, NeurIPS, ICLR, ICML, ICCV, AAAI, ACL, IROS, ICRA</br>
+                        <b>Reviewer for journals</b>: T-PAMI, Neurocomputing, TIP, JMLR</br>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 3em; margin-bottom: 1em;">
