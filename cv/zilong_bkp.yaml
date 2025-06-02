@@ -1,0 +1,171 @@
+- title: 'MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
+    and Generative Data Augmentation'
+  authors:
+  - '**Zilong Chen**'
+  - Yikai Wang
+  - Wenqiang Sun
+  - Feng Wang
+  - Yiwen Chen
+  - Huaping Liu
+  date: "CVPR 2025 (**Highlight**)"
+- title: 'V3d: Video diffusion models are effective 3d generators'
+  authors:
+  - '**Zilong Chen**'
+  - Yikai Wang
+  - Feng Wang
+  - Zhengyi Wang
+  - Huaping Liu
+  date: '2024'
+- title: Text-to-3d using gaussian splatting
+  authors:
+  - '**Zilong Chen**'
+  - Feng Wang
+  - Yikai Wang
+  - Huaping Liu
+  date: 'CVPR 2024'
+- title: 'Gaussianeditor: Swift and controllable 3d editing with gaussian splatting'
+  authors:
+  - "Yiwen Chen*"
+  - '**Zilong Chen***'
+  - Chi Zhang
+  - Feng Wang
+  - Xiaofeng Yang
+  - Yikai Wang
+  - Zhongang Cai
+  - Lei Yang
+  - Huaping Liu
+  - Guosheng Lin
+  date: 'CVPR 2024'
+- title: Masked space-time hash encoding for efficient dynamic scene reconstruction
+  authors:
+  - "Feng Wang*"
+  - '**Zilong Chen***'
+  - Guokang Wang
+  - Yafei Song
+  - Huaping Liu
+  date: 'NeurIPS 2023 (**Spotlight**)'
+- title: 'Video4DGen: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels'
+  authors:
+  - Yikai Wang
+  - Guangce Liu
+  - Xinzhou Wang
+  - '**Zilong Chen**'
+  - Jiafang Li
+  - Xin Liang
+  - Fuchun Sun
+  - Jun Zhu
+  date: 'T-PAMI 2025'
+- title: 'Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic
+    gaussian surfels'
+  authors:
+  - Yikai Wang
+  - Xinzhou Wang
+  - '**Zilong Chen**'
+  - Zhengyi Wang
+  - Fuchun Sun
+  - Jun Zhu
+  date: 'NeurIPS 2024'
+- title: 'Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
+    Models'
+  authors:
+  - Wenqiang Sun
+  - Zhengyi Wang
+  - Shuo Chen
+  - Yikai Wang
+  - '**Zilong Chen**'
+  - Jun Zhu
+  - Jun Zhang
+  date: '2024'
+- title: 'Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization'
+  authors:
+  - Yiwen Chen
+  - Yikai Wang
+  - Yihao Luo
+  - Zhengyi Wang
+  - '**Zilong Chen**'
+  - Jun Zhu
+  - Chi Zhang
+  - Guosheng Lin
+  date: '2024'
+- title: 'Dimensionx: Create any 3d and 4d scenes from a single image with controllable
+    video diffusion'
+  authors:
+  - Wenqiang Sun
+  - Shuo Chen
+  - Fangfu Liu
+  - '**Zilong Chen**'
+  - Yueqi Duan
+  - Jun Zhang
+  - Yikai Wang
+  date: '2024'
+- title: Knowledge graph augmented political perspective detection in news media
+  authors:
+  - Shangbin Feng
+  - '**Zilong Chen**'
+  - Qingyao Li
+  - Minnan Luo
+  date: '2021'
+- title: Encoding heterogeneous social and political context for entity stance prediction
+  authors:
+  - Shangbin Feng
+  - '**Zilong Chen**'
+  - Peisheng Yu
+  - Minnan Luo
+  date: '2021'
+- title: 'KCD: Knowledge walks and textual cues enhanced political perspective detection
+    in news media'
+  authors:
+  - Wenqian Zhang
+  - Shangbin Feng
+  - '**Zilong Chen**'
+  - Zhenyu Lei
+  - Jundong Li
+  - Minnan Luo
+  date: '2022'
+- title: 'Twibot-22: Towards graph-based twitter bot detection'
+  authors:
+  - Shangbin Feng
+  - Zhaoxuan Tan
+  - Herun Wan
+  - Ningnan Wang
+  - '**Zilong Chen**'
+  - Binchi Zhang
+  - Qinghua Zheng
+  - Wenqian Zhang
+  - Zhenyu Lei
+  - Shujie Yang
+  - others
+  date: 'NeurIPS 2022'
+- title: 'BIC: Twitter bot detection with text-graph interaction and semantic consistency'
+  authors:
+  - Zhenyu Lei
+  - Herun Wan
+  - Wenqian Zhang
+  - Shangbin Feng
+  - '**Zilong Chen**'
+  - Jundong Li
+  - Qinghua Zheng
+  - Minnan Luo
+  date: '2022'
+- title: 'KRACL: Contrastive learning with graph context modeling for sparse knowledge
+    graph completion'
+  authors:
+  - Zhaoxuan Tan
+  - '**Zilong Chen**'
+  - Shangbin Feng
+  - Qingyue Zhang
+  - Qinghua Zheng
+  - Jundong Li
+  - Minnan Luo
+  date: '2023'
+- title: 'Kgap: Knowledge graph augmented political perspective detection in news
+    media'
+  authors:
+  - Shangbin Feng
+  - '**Zilong Chen**'
+  - Wenqian Zhang
+  - Qingyao Li
+  - Qinghua Zheng
+  - Xiaojun Chang
+  - Minnan Luo
+  date: '2021'

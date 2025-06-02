@@ -25,7 +25,7 @@ def get_personal_data():
                     I am a Ph.D candidate at Department of Computer Science and Technology, Tsinghua University, where I am advised by <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Prof. Huaping Liu</a> and work closely with <a href="https://wangfeng18.github.io/" target="_blank">Dr. Feng Wang</a> and <a href="https://yikaiw.github.io/" target="_blank">Prof. Yikai Wang</a>. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/web/minnluo/" target="_blank">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.
                 </p>
                 <p>
-                    <a href="./assets/Zilong_Chen_CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-circle-user"></i> Resume</a>|
+                    <a href="./cv/rendercv_output/Zilong_Chen_CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-circle-user"></i> Resume</a>|
                     <a href="mailto:jaysonabcchen@gmail.com" style="margin-right: 5px"><i class="fa-regular fa-envelope fa-lg"></i> Email</a>|
                     <a href="./assets/img/heheyas-wechat.jpg" style="margin-right: 5px"><i class="fab fa-weixin"></i> Wechat</a>|
                     <a href="https://scholar.google.com.hk/citations?user=2pbka1gAAAAJ&hl=en" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>|

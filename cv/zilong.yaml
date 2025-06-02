@@ -1,0 +1,108 @@
+- title: '[1] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
+    and Generative Data Augmentation'
+  authors:
+  - '**#underline[Zilong Chen]**'
+  - Yikai Wang
+  - Wenqiang Sun
+  - Feng Wang
+  - Yiwen Chen
+  - Huaping Liu
+  date: CVPR 2025 (**Highlight**)
+  url: https://heheyas.github.io/MeshGen
+- title: '[2] V3d: Video diffusion models are effective 3d generators'
+  authors:
+  - '**#underline[Zilong Chen]**'
+  - Yikai Wang
+  - Feng Wang
+  - Zhengyi Wang
+  - Huaping Liu
+  date: Submitted to T-PAMI 2024
+  url: https://heheyas.github.io/V3D
+- title: '[3] Text-to-3d using gaussian splatting'
+  authors:
+  - '**#underline[Zilong Chen]**'
+  - Feng Wang
+  - Yikai Wang
+  - Huaping Liu
+  date: CVPR 2024
+  url: https://gsgen3d.github.io/
+- title: '[4] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting'
+  authors:
+  - Yiwen Chen
+  - '**#underline[Zilong Chen]***'
+  - Chi Zhang
+  - Feng Wang
+  - Xiaofeng Yang
+  - Yikai Wang
+  - Zhongang Cai
+  - Lei Yang
+  - Huaping Liu
+  - Guosheng Lin
+  date: CVPR 2024
+  url: https://buaacyw.github.io/gaussian-editor/
+- title: '[5] Masked space-time hash encoding for efficient dynamic scene reconstruction'
+  authors:
+  - Feng Wang
+  - '**#underline[Zilong Chen]***'
+  - Guokang Wang
+  - Yafei Song
+  - Huaping Liu
+  date: NeurIPS 2023 (**Spotlight**)
+  url: https://masked-spacetime-hashing.github.io/
+- title: '[6] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization'
+  authors:
+  - Yikai Wang
+  - Guangce Liu
+  - Xinzhou Wang
+  - '**#underline[Zilong Chen]**'
+  - Jiafang Li
+  - Xin Liang
+  - Fuchun Sun
+  - Jun Zhu
+  date: T-PAMI 2025
+  url: ''
+- title: '[7] Vidu4d: Single generated video to high-fidelity 4d reconstruction with
+    dynamic gaussian surfels'
+  authors:
+  - Yikai Wang
+  - Xinzhou Wang
+  - '**#underline[Zilong Chen]**'
+  - Zhengyi Wang
+  - Fuchun Sun
+  - Jun Zhu
+  date: NeurIPS 2024
+  url: ''
+- title: '[8] Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization'
+  authors:
+  - Yiwen Chen
+  - Yikai Wang
+  - Yihao Luo
+  - Zhengyi Wang
+  - '**#underline[Zilong Chen]**'
+  - Jun Zhu
+  - Chi Zhang
+  - Guosheng Lin
+  date: arxiv 2024
+  url: ''
+- title: '[9] Dimensionx: Create any 3d and 4d scenes from a single image with controllable
+    video diffusion'
+  authors:
+  - Wenqiang Sun
+  - Shuo Chen
+  - Fangfu Liu
+  - '**#underline[Zilong Chen]**'
+  - Yueqi Duan
+  - Jun Zhang
+  - Yikai Wang
+  date: arxiv 2024
+- title: '[10] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
+    Models'
+  authors:
+  - Wenqiang Sun
+  - Zhengyi Wang
+  - Shuo Chen
+  - Yikai Wang
+  - '**#underline[Zilong Chen]**'
+  - Jun Zhu
+  - Jun Zhang
+  date: ' 2024'
