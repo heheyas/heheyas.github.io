@@ -1,195 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        Zilong Chen
-    </title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
-        integrity="sha512-Pmhg2i/F7+5+7SsdoUqKeH7UAZoVMYb1sxGOoJ0jWXAEHP0XV2H4CITyK267eHWp2jpj7rtqWNkmEOw1tNyYpg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.css" integrity="sha384-PDbUeNCuE6bOPudPOgFyIUEy3UJawJVwr3XlGO90FIuf5qNIoTLSgOJo/dC2ZXV/" crossorigin="anonymous">
-
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.js" integrity="sha384-VkqWq8xtm5YQk1BBXczQ8/Sx+DlCzF8cuS43bZwmtVXzRFtyLTqTCdP7MKmKo+KN" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
-        onload="renderMathInElement(document.body, {delimiters: [{ left: '$$',  right: '$$',  display: false }]});"></script>
-    <style>
-        .markdown-body {
-            box-sizing: border-box;
-            min-width: 200px;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 45px;
-        }
-
-        @media (max-width: 767px) {
-            .markdown-body {
-                padding: 15px;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — Zilong Chen</title>
+<meta name="description" content="Full publication list of Zilong Chen.">
+<link rel="icon" type="image/x-icon" href="assets/img/avatar.jpg">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f6f2;--card:#fcfcf8;--ink:#1a1a17;--ink-strong:#0a0a0a;--muted:#5e574a;--soft:#8c8473;--rule:#e3e1d6;--accent:#1f7a4d;
+  --topbar-bg:rgba(246,246,242,0.82);--accent-soft:rgba(31,122,77,0.11);--accent-line:rgba(31,122,77,0.28);--code-bg:#16160f;--code-fg:#e8e3d6;--thumb-bg:#efeee7;}
+:root[data-theme="dark"]{--paper:#14140f;--card:#1d1c16;--ink:#e7e5db;--ink-strong:#f6f4ec;--muted:#a49e8f;--soft:#7c7669;--rule:#2d2b23;--accent:#5cb488;
+  --topbar-bg:rgba(20,20,15,0.82);--accent-soft:rgba(92,180,136,0.15);--accent-line:rgba(92,180,136,0.38);--code-bg:#0e0e0a;--code-fg:#e8e3d6;--thumb-bg:#26251d;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background-color .25s ease,color .25s ease;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+::selection{background:var(--ink);color:var(--paper);}
+.wrap{max-width:860px;margin:0 auto;padding:40px 28px 72px;}
+/* sticky top nav */
+.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);}
+.topbar-inner{max-width:860px;margin:0 auto;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--ink-strong);}
+.brand:hover{color:var(--accent);text-decoration:none;}
+.navlinks{display:flex;gap:3px;align-items:center;}
+.navlinks a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);padding:6px 11px;border-radius:100px;white-space:nowrap;transition:color .15s,background .15s;}
+.navlinks a:hover{color:var(--accent);text-decoration:none;}
+.navlinks a.active{color:var(--ink-strong);background:var(--accent-soft);}
+.navlinks a.cv{color:var(--accent);}
+.themebtn{margin-left:4px;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--rule);border-radius:100px;background:transparent;color:var(--muted);cursor:pointer;transition:color .15s,border-color .15s;}
+.themebtn:hover{color:var(--accent);border-color:var(--accent);}
+.themebtn .ic{width:15px;height:15px;}
+.themebtn .sun{display:none;}
+:root[data-theme="dark"] .themebtn .sun{display:inline-flex;}
+:root[data-theme="dark"] .themebtn .moon{display:none;}
+section[id],header[id]{scroll-margin-top:64px;}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 168px;gap:32px;align-items:start;}
+.name{font-size:clamp(2rem,5.2vw,3rem);font-weight:700;letter-spacing:-0.03em;line-height:1.0;margin:0 0 10px;color:var(--ink-strong);}
+.role{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);margin:0 0 3px;letter-spacing:0.01em;}
+.interests{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);margin:0 0 16px;}
+.bio{margin:0 0 16px;color:var(--ink);}
+.bio a{font-weight:500;}
+.photo-wrap{justify-self:end;}
+.photo{width:168px;height:auto;border-radius:6px;border:1px solid var(--rule);display:block;}
+.links{display:flex;flex-wrap:wrap;gap:8px;}
+.links a{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:100px;padding:7px 14px;transition:border-color .15s,color .15s;}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+.links a .ic{width:15px;height:15px;flex:0 0 auto;}
+/* sections */
+section{margin-top:46px;}
+h2{font-size:1.42rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink-strong);margin:0 0 3px;}
+h2 .extra{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:400;color:var(--soft);letter-spacing:0;}
+h2 .extra a{color:var(--muted);}
+.sechr{border:none;border-top:1px solid var(--rule);margin:11px 0 24px;}
+/* publications */
+.pub{display:grid;grid-template-columns:196px 1fr;gap:22px;margin:0 0 27px;align-items:start;}
+.pub.nomedia{grid-template-columns:1fr;}
+.pub-body{min-width:0;}
+.pub-thumb img,.pub-thumb video{width:100%;border-radius:4px;border:1px solid var(--rule);display:block;background:var(--thumb-bg);}
+.pub-body .t{font-size:1.02rem;font-weight:600;color:var(--ink-strong);line-height:1.32;}
+.pub-body .t:hover{color:var(--accent);text-decoration:none;}
+.pub-body .au{font-size:0.87rem;color:var(--muted);margin:5px 0 4px;line-height:1.55;}
+.pub-body .au a{color:var(--muted);}
+.pub-body .au a:hover{color:var(--accent);}
+.pub-body .au .me{font-weight:700;color:var(--ink-strong);}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:12px;margin:3px 0 8px;display:flex;align-items:center;flex-wrap:wrap;gap:7px;}
+.meta .venue{font-weight:600;color:var(--ink-strong);}
+.meta .yr{color:var(--muted);}
+.award{font-family:"IBM Plex Mono",monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);padding:2px 8px;border-radius:100px;}
+.plinks{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:8px;}
+.plinks img{vertical-align:middle;height:15px;}
+.plinks .sep{color:var(--rule);}
+details.bib{margin-top:9px;}
+details.bib>summary{font-size:0;cursor:pointer;list-style:none;width:fit-content;}
+details.bib>summary::-webkit-details-marker{display:none;}
+details.bib>summary::before{content:"+ bibtex";font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);}
+details.bib[open]>summary::before{content:"− bibtex";}
+.bibbox{position:relative;margin-top:8px;}
+.bibbox pre{background:var(--code-bg);color:var(--code-fg);font-family:"IBM Plex Mono",monospace;font-size:11.5px;line-height:1.55;padding:14px 16px;border-radius:4px;overflow-x:auto;margin:0;white-space:pre;max-width:100%;}
+.bibcopy{position:absolute;top:8px;right:8px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#cbd5c0;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:4px 8px;cursor:pointer;transition:background .15s,color .15s;}
+.bibcopy:hover{background:rgba(255,255,255,0.18);color:#fff;}
+.bibcopy.ok{color:#7fdda8;border-color:rgba(127,221,168,0.55);}
+/* news */
+.news{list-style:none;margin:0;padding:0;}
+.news li{display:grid;grid-template-columns:84px 1fr;gap:16px;padding:5px 0;font-size:0.97rem;align-items:baseline;}
+.news .nd{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);white-space:nowrap;}
+.news .nc{color:var(--ink);min-width:0;}
+.news .nc b{font-weight:600;color:var(--ink-strong);}
+/* services */
+.svc{font-size:0.96rem;color:var(--ink);line-height:1.95;}
+.svc b{font-weight:600;color:var(--ink-strong);}
+/* full-list page header */
+.fl-head{padding-top:6px;}
+.fl-back{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);}
+.fl-back:hover{color:var(--accent);text-decoration:none;}
+@media(max-width:640px){
+  .wrap{padding:34px 20px 56px;}
+  .topbar-inner{padding:8px 16px;gap:10px;}
+  .navlinks{gap:0;overflow-x:auto;flex-wrap:nowrap;-ms-overflow-style:none;scrollbar-width:none;}
+  .navlinks::-webkit-scrollbar{display:none;}
+  .navlinks a{padding:6px 8px;font-size:11.5px;}
+  .hero{grid-template-columns:1fr;gap:20px;}
+  .photo-wrap{order:-1;justify-self:start;}
+  .photo{width:132px;}
+  .pub{grid-template-columns:1fr;gap:12px;}
+  .pub-thumb{max-width:300px;}
+}
+@media(max-width:460px){
+  .brand{display:none;}
+  .navlinks{width:100%;justify-content:space-between;}
+}
+</style>
 </head>
-
 <body>
-    <article class="markdown-body">
-        <h1>Zilong Chen's CV</h1>
-        <ul>
-        <li>Phone: +86 186 2945 1544</li>
-        <li>Email: <a href="mailto:jaysonabcchen@gmail.com">jaysonabcchen@gmail.com</a></li>
-        <li>Location: Tsinghua University, Beijing, China</li>
-        <li>Website: <a href="https://heheyas.github.io/">heheyas.github.io</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/zilong-chen-99671523b">zilong-chen-99671523b</a></li>
-        <li>GitHub: <a href="https://github.com/heheyas">heheyas</a></li>
-        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=2pbka1gAAAAJ">2pbka1gAAAAJ</a></li>
-        </ul>
-        <h1>Summary</h1>
-        <p>I am interested in multimodal generation. Previously, my primary research focused on 3D reconstruction and generation. I am a Ph.D student at Department of Computer Science and Technology, Tsinghua University, where I am advised by <a href="https://sites.google.com/site/thuliuhuaping">Prof. Huaping Liu</a>. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/web/minnluo">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.</p>
-        <h1>Education</h1>
-        <h2>Tsinghua University, PhD in Computer Science</h2>
-        <ul>
-        <li>Sept 2022 – present</li>
-        <li>Advisor: <a href="https://sites.google.com/site/thuliuhuaping">Huaping Liu</a></li>
-        </ul>
-        <h2>Xi'an Jiaotong University, BS in Physics</h2>
-        <ul>
-        <li>Sept 2018 – July 2022</li>
-        <li>Advisor: <a href="https://gr.xjtu.edu.cn/web/minnluo">Minnan Luo</a></li>
-        </ul>
-        <h1>Experience</h1>
-        <h2>Shengshu Inc., Research intern on video and 3D generation</h2>
-        <ul>
-        <li>Nov 2023 – Mar 2025</li>
-        <li>Beijing, China</li>
-        <li>Alleviating Janus problem in optimization-based 3D generation methods. (CVPR 2024 [3])</li>
-        <li>Finetune video diffusion model for 3D generation.</li>
-        <li>Native 3D generation using limited 3D data. (CVPR 2025 Highlight [1])</li>
-        </ul>
-        <h1>Publications (= Indicates Equal Contribution)</h1>
-        <h2>[1] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation (<a href="heheyas.github.io/MeshGen">https://heheyas.github.io/MeshGen</a>)</h2>
-        <ul>
-        <li>CVPR 2025 (<strong>Highlight</strong>)</li>
-        <li><strong>#underline[Zilong Chen]</strong>, Yikai Wang, Wenqiang Sun, Feng Wang, Yiwen Chen, Huaping Liu</li>
-        </ul>
-        <h2>[2] V3d: Video diffusion models are effective 3d generators (<a href="heheyas.github.io/V3D">https://heheyas.github.io/V3D</a>)</h2>
-        <ul>
-        <li>Submitted to T-PAMI 2024</li>
-        <li><strong>#underline[Zilong Chen]</strong>, Yikai Wang, Feng Wang, Zhengyi Wang, Huaping Liu</li>
-        </ul>
-        <h2>[3] Text-to-3d using gaussian splatting (<a href="gsgen3d.github.io">https://gsgen3d.github.io/</a>)</h2>
-        <ul>
-        <li>CVPR 2024</li>
-        <li><strong>#underline[Zilong Chen]</strong>, Feng Wang, Yikai Wang, Huaping Liu</li>
-        </ul>
-        <h2>[4] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting (<a href="buaacyw.github.io/gaussian-editor">https://buaacyw.github.io/gaussian-editor/</a>)</h2>
-        <ul>
-        <li>CVPR 2024</li>
-        <li>Yiwen Chen=, <strong>#underline[Zilong Chen]=</strong>, Chi Zhang, Feng Wang, Xiaofeng Yang, Yikai Wang, Zhongang Cai, Lei Yang, Huaping Liu, Guosheng Lin</li>
-        </ul>
-        <h2>[5] Masked space-time hash encoding for efficient dynamic scene reconstruction (<a href="masked-spacetime-hashing.github.io">https://masked-spacetime-hashing.github.io/</a>)</h2>
-        <ul>
-        <li>NeurIPS 2023 (<strong>Spotlight</strong>)</li>
-        <li>Feng Wang=, <strong>#underline[Zilong Chen]=</strong>, Guokang Wang, Yafei Song, Huaping Liu</li>
-        </ul>
-        <h2>[6] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization (<a href="vidu4d-dgs.github.io">https://vidu4d-dgs.github.io/</a>)</h2>
-        <ul>
-        <li>T-PAMI 2025</li>
-        <li>Yikai Wang, Guangce Liu, Xinzhou Wang, <strong>#underline[Zilong Chen]</strong>, Jiafang Li, Xin Liang, Fuchun Sun, Jun Zhu</li>
-        </ul>
-        <h2>[7] Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels (<a href="vidu4d-dgs.github.io">https://vidu4d-dgs.github.io/</a>)</h2>
-        <ul>
-        <li>NeurIPS 2024</li>
-        <li>Yikai Wang, Xinzhou Wang, <strong>#underline[Zilong Chen]</strong>, Zhengyi Wang, Fuchun Sun, Jun Zhu</li>
-        </ul>
-        <h2>[8] Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization (<a href="buaacyw.github.io/meshanything-v2">https://buaacyw.github.io/meshanything-v2/</a>)</h2>
-        <ul>
-        <li>arxiv 2024</li>
-        <li>Yiwen Chen, Yikai Wang, Yihao Luo, Zhengyi Wang, <strong>#underline[Zilong Chen]</strong>, Jun Zhu, Chi Zhang, Guosheng Lin</li>
-        </ul>
-        <h2>[9] Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion (<a href="chenshuo20.github.io/DimensionX">https://chenshuo20.github.io/DimensionX/</a>)</h2>
-        <ul>
-        <li>arxiv 2024</li>
-        <li>Wenqiang Sun, Shuo Chen, Fangfu Liu, <strong>#underline[Zilong Chen]</strong>, Yueqi Duan, Jun Zhang, Yikai Wang</li>
-        </ul>
-        <h2>[10] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models (<a href="freeplane3d.github.io">https://freeplane3d.github.io/</a>)</h2>
-        <ul>
-        <li>arxiv 2024</li>
-        <li>Wenqiang Sun, Zhengyi Wang, Shuo Chen, Yikai Wang, <strong>#underline[Zilong Chen]</strong>, Jun Zhu, Jun Zhang</li>
-        </ul>
-        <h2>[11] Twibot-22: Towards graph-based twitter bot detection</h2>
-        <ul>
-        <li>NeurIPS 2022</li>
-        <li>Shangbin Feng=, Zhaoxuan Tan=, Herun Wan=, Ningnan Wang=, <strong>#underline[Zilong Chen]=</strong>, Binchi Zhang=, Qinghua Zheng, Wenqian Zhang, Zhenyu Lei, Shujie Yang, others</li>
-        </ul>
-        <h2>[12] Knowledge graph augmented political perspective detection in news media</h2>
-        <ul>
-        <li>arxiv 2021</li>
-        <li>Shangbin Feng, <strong>#underline[Zilong Chen]</strong>, Qingyao Li, Minnan Luo</li>
-        </ul>
-        <h2>[13] Encoding heterogeneous social and political context for entity stance prediction</h2>
-        <ul>
-        <li>arxiv 2021</li>
-        <li>Shangbin Feng, <strong>#underline[Zilong Chen]</strong>, Peisheng Yu, Minnan Luo</li>
-        </ul>
-        <h2>[14] KCD: Knowledge walks and textual cues enhanced political perspective detection in news media</h2>
-        <ul>
-        <li>NAACL 2022 (<strong>Oral</strong>)</li>
-        <li>Wenqian Zhang=, Shangbin Feng=, <strong>#underline[Zilong Chen]=</strong>, Zhenyu Lei, Jundong Li, Minnan Luo</li>
-        </ul>
-        <h2>[15] BIC: Twitter bot detection with text-graph interaction and semantic consistency</h2>
-        <ul>
-        <li>ACL 2023</li>
-        <li>Zhenyu Lei, Herun Wan, Wenqian Zhang, Shangbin Feng, <strong>#underline[Zilong Chen]</strong>, Jundong Li, Qinghua Zheng, Minnan Luo</li>
-        </ul>
-        <h2>[16] KRACL: Contrastive learning with graph context modeling for sparse knowledge graph completion</h2>
-        <ul>
-        <li>WWW 2023</li>
-        <li>Zhaoxuan Tan, <strong>#underline[Zilong Chen]</strong>, Shangbin Feng, Qingyue Zhang, Qinghua Zheng, Jundong Li, Minnan Luo</li>
-        </ul>
-        <h2>[17] Kgap: Knowledge graph augmented political perspective detection in news media</h2>
-        <ul>
-        <li>arxiv 2021</li>
-        <li>Shangbin Feng, <strong>#underline[Zilong Chen]</strong>, Wenqian Zhang, Qingyao Li, Qinghua Zheng, Xiaojun Chang, Minnan Luo</li>
-        </ul>
-        <h2>[18] PAR: Political Actor Representation Learning with Social Context and Expert Knowledge</h2>
-        <ul>
-        <li>EMNLP 2022</li>
-        <li>Shangbin Feng, Zhaoxuan Tan, <strong>#underline[Zilong Chen]</strong>, Ningnan Wang, Peisheng Yu, Qinghua Zheng, Xiaojun Chang, Minnan Luo</li>
-        </ul>
-        <h1>Projects</h1>
-        <h2><a href="https://github.com/heheyas/gaussian_splatting_3d">3D Gaussian Splatting</a></h2>
-        <ul>
-        <li>2024</li>
-        <li>Implementing 3D Gaussian Splatting using pure CUDA.</li>
-        <li>Support my own researches on 3D Gaussian Splatting related topics.</li>
-        </ul>
-        <h2><a href="https://github.com/WangFeng18/Segment-Anything-in-NeRF">Segment Anything in NeRF</a></h2>
-        <ul>
-        <li>2024</li>
-        <li>Extending Segment Anything to 3D scenes with NeRF and support natural language prompt with CLip-Seg.</li>
-        <li>Using depth-based point prompt for accurate 3D point prompting.</li>
-        </ul>
-        <h1>Awards</h1>
-        <h2>Huiyan Scholarship (Tsinghua University)</h2>
-        <ul>
-        <li>2024</li>
-        </ul>
-        <h2>Track winner, BMW hackthon</h2>
-        <ul>
-        <li>2023</li>
-        </ul>
-        <h1>Technologies</h1>
-        <ul>
-        <li>Languages: C++, C, CUDA, Python</li>
-        <li>Software: Blender, LaTeX</li>
-        </ul>
-    </article>
+<nav class="topbar"><div class="topbar-inner"><a class="brand" href="index.html#about">Zilong Chen</a><div class="navlinks"><a href="index.html#news">News</a><a href="index.html#publications">Publications</a><a href="index.html#projects">Projects</a><a href="index.html#services">Services</a><a class="cv" href="./cv/rendercv_output/Zilong_Chen_CV.pdf" target="_blank">CV &#8599;</a><button class="themebtn" type="button" aria-label="Toggle theme"><svg class="ic sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></div></div></nav>
+<main class="wrap">
+<header class="fl-head" id="about"><a class="fl-back" href="index.html">&larr; Zilong Chen</a><h1 class="name" style="margin-top:12px;">Publications</h1><p class="role">Full list &middot; * equal contribution</p></header><section id="publications" style="margin-top:26px;"><hr class="sechr"><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/vqvaworld.jpg" alt="VQ-VA World: Towards High-Quality Visual Question-Visual Answering"></div><div class="pub-body"><a class="t" href="https://chenhuigou.github.io/VQ-VA-World/" target="_blank">VQ-VA World: Towards High-Quality Visual Question-Visual Answering</a><div class="au"><a href="http://www.google.com/search?q=Chenhui Gou" target="_blank">Chenhui Gou*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Zeyu Wang" target="_blank">Zeyu Wang*</a>, <a href="http://www.google.com/search?q=Feng Li" target="_blank">Feng Li</a>, <a href="http://www.google.com/search?q=Deyao Zhu" target="_blank">Deyao Zhu</a>, <a href="http://www.google.com/search?q=Zicheng Duan" target="_blank">Zicheng Duan</a>, <a href="http://www.google.com/search?q=Kunchang Li" target="_blank">Kunchang Li</a>, <a href="http://www.google.com/search?q=Chaorui Deng" target="_blank">Chaorui Deng</a>, <a href="http://www.google.com/search?q=Hongyi Yuan" target="_blank">Hongyi Yuan</a>, <a href="http://www.google.com/search?q=Haoqi Fan" target="_blank">Haoqi Fan</a>, <a href="http://www.google.com/search?q=Cihang Xie" target="_blank">Cihang Xie</a>, <a href="http://www.google.com/search?q=Jianfei Cai" target="_blank">Jianfei Cai</a>, <a href="http://www.google.com/search?q=Hamid Rezatofighi" target="_blank">Hamid Rezatofighi</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2026</span></div><div class="plinks"><a href="https://chenhuigou.github.io/VQ-VA-World/" target="_blank">Project</a><span class="sep">·</span><a href="https://arxiv.org/abs/2511.20573" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{gou2026vqvaworld,
+  author = {Chenhui Gou and Zilong Chen and Zeyu Wang and Feng Li and Deyao Zhu and Zicheng Duan and Kunchang Li and Chaorui Deng and Hongyi Yuan and Haoqi Fan and Cihang Xie and Jianfei Cai and Hamid Rezatofighi},
+  title = {VQ-VA World: Towards High-Quality Visual Question-Visual Answering},
+  booktitle = {CVPR},
+  year = {2026},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation" target="_blank">LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation</a><div class="au"><a href="http://www.google.com/search?q=Zeyu Wang" target="_blank">Zeyu Wang*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Chenhui Gou" target="_blank">Chenhui Gou*</a>, <a href="http://www.google.com/search?q=Feng Li" target="_blank">Feng Li</a>, <a href="http://www.google.com/search?q=Chaorui Deng" target="_blank">Chaorui Deng</a>, <a href="http://www.google.com/search?q=Deyao Zhu" target="_blank">Deyao Zhu</a>, <a href="http://www.google.com/search?q=Kunchang Li" target="_blank">Kunchang Li</a>, <a href="http://www.google.com/search?q=Weihao Yu" target="_blank">Weihao Yu</a>, <a href="http://www.google.com/search?q=Haoqin Tu" target="_blank">Haoqin Tu</a>, <a href="http://www.google.com/search?q=Haoqi Fan" target="_blank">Haoqi Fan</a>, <a href="http://www.google.com/search?q=Cihang Xie" target="_blank">Cihang Xie</a></div><div class="meta"><span class="venue">ECCV</span> <span class="yr">2026</span></div><div class="plinks"><a href="https://arxiv.org/abs/2510.22946" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2026lightfusion,
+  author = {Zeyu Wang and Zilong Chen and Chenhui Gou and Feng Li and Chaorui Deng and Deyao Zhu and Kunchang Li and Weihao Yu and Haoqin Tu and Haoqi Fan and Cihang Xie},
+  title = {LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation},
+  booktitle = {ECCV},
+  year = {2026},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/meshgen.png" alt="MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation"></div><div class="pub-body"><a class="t" href="https://heheyas.github.io/MeshGen" target="_blank">MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2025</span><span class="award">Highlight</span></div><div class="plinks"><a href="https://heheyas.github.io/MeshGen" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=3HO0GuyOJdw&ab_channel=ZilongChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/heheyas/MeshGen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/MeshGen?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2403.06738" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2025meshgen,
+  author = {Zilong Chen and Yikai Wang and Wenqiang Sun and Feng Wang and Yiwen Chen and Huaping Liu},
+  title = {MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation},
+  booktitle = {CVPR},
+  year = {2025},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/v3d.png" alt="V3d: Video diffusion models are effective 3d generators"></div><div class="pub-body"><a class="t" href="https://heheyas.github.io/V3D" target="_blank">V3d: Video diffusion models are effective 3d generators</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">Submitted to T-PAMI</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://heheyas.github.io/V3D" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/heheyas/V3D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/V3D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2403.06738" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024v3d,
+  author = {Zilong Chen and Yikai Wang and Feng Wang and Zhengyi Wang and Huaping Liu},
+  title = {V3d: Video diffusion models are effective 3d generators},
+  booktitle = {Submitted to T-PAMI},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/gsgen.jpg" alt="Text-to-3d using gaussian splatting"></div><div class="pub-body"><a class="t" href="https://gsgen3d.github.io/" target="_blank">Text-to-3d using gaussian splatting</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://gsgen3d.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=bUmOO7puRK4&ab_channel=ZilongChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/gsgen3d/gsgen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/gsgen3d/gsgen?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2309.16585" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2023text,
+  author = {Zilong Chen and Feng Wang and Yikai Wang and Huaping Liu},
+  title = {Text-to-3d using gaussian splatting},
+  booktitle = {CVPR},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/gaussianeditor.png" alt="Gaussianeditor: Swift and controllable 3d editing with gaussian splatting"></div><div class="pub-body"><a class="t" href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Gaussianeditor: Swift and controllable 3d editing with gaussian splatting</a><div class="au"><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="http://www.google.com/search?q=Xiaofeng Yang" target="_blank">Xiaofeng Yang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Zhongang Cai" target="_blank">Zhongang Cai</a>, <a href="http://www.google.com/search?q=Lei Yang" target="_blank">Lei Yang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=TdZIICSFqsU&ab_channel=YiwenChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/buaacyw/GaussianEditor" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/GaussianEditor?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2311.14521" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024gaussianeditor,
+  author = {Yiwen Chen and Zilong Chen and Chi Zhang and Feng Wang and Xiaofeng Yang and Yikai Wang and Zhongang Cai and Lei Yang and Huaping Liu and Guosheng Lin},
+  title = {Gaussianeditor: Swift and controllable 3d editing with gaussian splatting},
+  booktitle = {CVPR},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/msth.png" alt="Masked space-time hash encoding for efficient dynamic scene reconstruction"></div><div class="pub-body"><a class="t" href="https://masked-spacetime-hashing.github.io/" target="_blank">Masked space-time hash encoding for efficient dynamic scene reconstruction</a><div class="au"><a href="https://wangfeng18.github.io/" target="_blank">Feng Wang*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Guokang Wang" target="_blank">Guokang Wang</a>, <a href="http://www.google.com/search?q=Yafei Song" target="_blank">Yafei Song</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">NeurIPS</span> <span class="yr">2023</span><span class="award">Spotlight</span></div><div class="plinks"><a href="https://masked-spacetime-hashing.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/masked-spacetime-hashing/msth" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/masked-spacetime-hashing/msth?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2310.17527" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2023masked,
+  author = {Feng Wang and Zilong Chen and Guokang Wang and Yafei Song and Huaping Liu},
+  title = {Masked space-time hash encoding for efficient dynamic scene reconstruction},
+  booktitle = {NeurIPS},
+  year = {2023},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/video4dgen.png" alt="Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization"></div><div class="pub-body"><a class="t" href="https://vidu4d-dgs.github.io/" target="_blank">Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization</a><div class="au"><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Guangce Liu" target="_blank">Guangce Liu</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jiafang Li" target="_blank">Jiafang Li</a>, <a href="http://www.google.com/search?q=Xin Liang" target="_blank">Xin Liang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a></div><div class="meta"><span class="venue">T-PAMI</span> <span class="yr">2025</span></div><div class="plinks"><a href="https://vidu4d-dgs.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2504.04153" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2025video4dgen,
+  author = {Yikai Wang and Guangce Liu and Xinzhou Wang and Zilong Chen and Jiafang Li and Xin Liang and Fuchun Sun and Jun Zhu},
+  title = {Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization},
+  booktitle = {T-PAMI},
+  year = {2025},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/vidu4d.png" alt="Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels"></div><div class="pub-body"><a class="t" href="https://vidu4d-dgs.github.io/" target="_blank">Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels</a><div class="au"><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span class="me">Zilong Chen</span>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a></div><div class="meta"><span class="venue">NeurIPS</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://vidu4d-dgs.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2405.16822" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2024vidu4d,
+  author = {Yikai Wang and Xinzhou Wang and Zilong Chen and Zhengyi Wang and Fuchun Sun and Jun Zhu},
+  title = {Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels},
+  booktitle = {NeurIPS},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/meshanythingv2.png" alt="Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization"></div><div class="pub-body"><a class="t" href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization</a><div class="au"><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Yihao Luo" target="_blank">Yihao Luo</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/buaacyw/MeshAnythingV2" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/MeshAnythingV2?style=social" alt="stars"></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024meshanything,
+  author = {Yiwen Chen and Yikai Wang and Yihao Luo and Zhengyi Wang and Zilong Chen and Jun Zhu and Chi Zhang and Guosheng Lin},
+  title = {Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/dimensionx.png" alt="Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion"></div><div class="pub-body"><a class="t" href="https://chenshuo20.github.io/DimensionX/" target="_blank">Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion</a><div class="au"><a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="http://www.google.com/search?q=Fangfu Liu" target="_blank">Fangfu Liu</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Yueqi Duan" target="_blank">Yueqi Duan</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://chenshuo20.github.io/DimensionX/" target="_blank">Project</a><span class="sep">·</span><a href="https://youtu.be/ViDQI1HMY2U?si=f1RGd82n6yj6TOFB" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/wenqsun/DimensionX" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/DimensionX?style=social" alt="stars"></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{sun2024dimensionx,
+  author = {Wenqiang Sun and Shuo Chen and Fangfu Liu and Zilong Chen and Yueqi Duan and Jun Zhang and Yikai Wang},
+  title = {Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/freeplane.png" alt="Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models"></div><div class="pub-body"><a class="t" href="https://freeplane3d.github.io/" target="_blank">Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models</a><div class="au"><a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://freeplane3d.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/wenqsun/Freeplane" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/Freeplane?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/pdf/2406.00750" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{sun2024freeplane,
+  author = {Wenqiang Sun and Zhengyi Wang and Shuo Chen and Yikai Wang and Zilong Chen and Jun Zhu and Jun Zhang},
+  title = {Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=Twibot-22: Towards graph-based twitter bot detection" target="_blank">Twibot-22: Towards graph-based twitter bot detection</a><div class="au"><a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <a href="http://www.google.com/search?q=Zhaoxuan Tan" target="_blank">Zhaoxuan Tan</a>, <a href="http://www.google.com/search?q=Herun Wan" target="_blank">Herun Wan</a>, <a href="http://www.google.com/search?q=Ningnan Wang" target="_blank">Ningnan Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Binchi Zhang" target="_blank">Binchi Zhang</a>, <a href="http://www.google.com/search?q=Qinghua Zheng" target="_blank">Qinghua Zheng</a>, <a href="http://www.google.com/search?q=Wenqian Zhang" target="_blank">Wenqian Zhang</a>, <a href="http://www.google.com/search?q=Zhenyu Lei" target="_blank">Zhenyu Lei</a>, <a href="http://www.google.com/search?q=Shujie Yang" target="_blank">Shujie Yang</a>, <a href="http://www.google.com/search?q=others" target="_blank">others</a></div><div class="meta"><span class="venue">Advances in Neural Information Processing Systems</span> <span class="yr">NeurIPS 2022</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{feng2022twibot,
+  author = {Shangbin Feng and Zhaoxuan Tan and Herun Wan and Ningnan Wang and Zilong Chen and Binchi Zhang and Qinghua Zheng and Wenqian Zhang and Zhenyu Lei and Shujie Yang and others},
+  title = {Twibot-22: Towards graph-based twitter bot detection},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year = {NeurIPS 2022},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=Knowledge graph augmented political perspective detection in news media" target="_blank">Knowledge graph augmented political perspective detection in news media</a><div class="au"><a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Qingyao Li" target="_blank">Qingyao Li</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="venue">arXiv preprint arXiv:2108.03861</span> <span class="yr">2021</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{feng2021knowledge,
+  author = {Shangbin Feng and Zilong Chen and Qingyao Li and Minnan Luo},
+  title = {Knowledge graph augmented political perspective detection in news media},
+  booktitle = {arXiv preprint arXiv:2108.03861},
+  year = {2021},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=Encoding heterogeneous social and political context for entity stance prediction" target="_blank">Encoding heterogeneous social and political context for entity stance prediction</a><div class="au"><a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Peisheng Yu" target="_blank">Peisheng Yu</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="yr">2021</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{feng2021encoding,
+  author = {Shangbin Feng and Zilong Chen and Peisheng Yu and Minnan Luo},
+  title = {Encoding heterogeneous social and political context for entity stance prediction},
+  booktitle = {},
+  year = {2021},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=KCD: Knowledge walks and textual cues enhanced political perspective detection in news media" target="_blank">KCD: Knowledge walks and textual cues enhanced political perspective detection in news media</a><div class="au"><a href="http://www.google.com/search?q=Wenqian Zhang" target="_blank">Wenqian Zhang*</a>, <a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Zhenyu Lei" target="_blank">Zhenyu Lei</a>, <a href="http://www.google.com/search?q=Jundong Li" target="_blank">Jundong Li</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="venue">NAACL</span> <span class="yr">2022</span><span class="award">Oral</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{zhang2022kcd,
+  author = {Wenqian Zhang and Shangbin Feng and Zilong Chen and Zhenyu Lei and Jundong Li and Minnan Luo},
+  title = {KCD: Knowledge walks and textual cues enhanced political perspective detection in news media},
+  booktitle = {NAACL},
+  year = {2022},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=BIC: Twitter bot detection with text-graph interaction and semantic consistency" target="_blank">BIC: Twitter bot detection with text-graph interaction and semantic consistency</a><div class="au"><a href="http://www.google.com/search?q=Zhenyu Lei" target="_blank">Zhenyu Lei</a>, <a href="http://www.google.com/search?q=Herun Wan" target="_blank">Herun Wan</a>, <a href="http://www.google.com/search?q=Wenqian Zhang" target="_blank">Wenqian Zhang</a>, <a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jundong Li" target="_blank">Jundong Li</a>, <a href="http://www.google.com/search?q=Qinghua Zheng" target="_blank">Qinghua Zheng</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="venue">ACL</span> <span class="yr">2023</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{lei2022bic,
+  author = {Zhenyu Lei and Herun Wan and Wenqian Zhang and Shangbin Feng and Zilong Chen and Jundong Li and Qinghua Zheng and Minnan Luo},
+  title = {BIC: Twitter bot detection with text-graph interaction and semantic consistency},
+  booktitle = {ACL},
+  year = {2023},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=KRACL: Contrastive learning with graph context modeling for sparse knowledge graph completion" target="_blank">KRACL: Contrastive learning with graph context modeling for sparse knowledge graph completion</a><div class="au"><a href="http://www.google.com/search?q=Zhaoxuan Tan" target="_blank">Zhaoxuan Tan</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <a href="http://www.google.com/search?q=Qingyue Zhang" target="_blank">Qingyue Zhang</a>, <a href="http://www.google.com/search?q=Qinghua Zheng" target="_blank">Qinghua Zheng</a>, <a href="http://www.google.com/search?q=Jundong Li" target="_blank">Jundong Li</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="venue">WWW</span> <span class="yr">2023</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{tan2023kracl,
+  author = {Zhaoxuan Tan and Zilong Chen and Shangbin Feng and Qingyue Zhang and Qinghua Zheng and Jundong Li and Minnan Luo},
+  title = {KRACL: Contrastive learning with graph context modeling for sparse knowledge graph completion},
+  booktitle = {WWW},
+  year = {2023},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=Kgap: Knowledge graph augmented political perspective detection in news media" target="_blank">Kgap: Knowledge graph augmented political perspective detection in news media</a><div class="au"><a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Wenqian Zhang" target="_blank">Wenqian Zhang</a>, <a href="http://www.google.com/search?q=Qingyao Li" target="_blank">Qingyao Li</a>, <a href="http://www.google.com/search?q=Qinghua Zheng" target="_blank">Qinghua Zheng</a>, <a href="http://www.google.com/search?q=Xiaojun Chang" target="_blank">Xiaojun Chang</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="yr">2021</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{feng2021kgap,
+  author = {Shangbin Feng and Zilong Chen and Wenqian Zhang and Qingyao Li and Qinghua Zheng and Xiaojun Chang and Minnan Luo},
+  title = {Kgap: Knowledge graph augmented political perspective detection in news media},
+  booktitle = {},
+  year = {2021},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=PAR: Political Actor Representation Learning with Social Context and Expert Knowledge" target="_blank">PAR: Political Actor Representation Learning with Social Context and Expert Knowledge</a><div class="au"><a href="http://www.google.com/search?q=Shangbin Feng" target="_blank">Shangbin Feng</a>, <a href="http://www.google.com/search?q=Zhaoxuan Tan" target="_blank">Zhaoxuan Tan</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Ningnan Wang" target="_blank">Ningnan Wang</a>, <a href="http://www.google.com/search?q=Peisheng Yu" target="_blank">Peisheng Yu</a>, <a href="http://www.google.com/search?q=Qinghua Zheng" target="_blank">Qinghua Zheng</a>, <a href="http://www.google.com/search?q=Xiaojun Chang" target="_blank">Xiaojun Chang</a>, <a href="http://www.google.com/search?q=Minnan Luo" target="_blank">Minnan Luo</a></div><div class="meta"><span class="venue">EMNLP</span> <span class="yr">2022</span></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{feng2022political,
+  author = {Shangbin Feng and Zhaoxuan Tan and Zilong Chen and Ningnan Wang and Peisheng Yu and Qinghua Zheng and Xiaojun Chang and Minnan Luo},
+  title = {PAR: Political Actor Representation Learning with Social Context and Expert Knowledge},
+  booktitle = {EMNLP},
+  year = {2022},
+}</pre></div></details></div></div></section>
+</main>
+<script>
+(function(){
+  // active-section highlight (only fires when in-page #anchors exist)
+  var links = {};
+  document.querySelectorAll('.navlinks a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  if(Object.keys(links).length){
+    var obs = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          for(var k in links) links[k].classList.remove('active');
+          if(links[e.target.id]) links[e.target.id].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    document.querySelectorAll('section[id]').forEach(function(s){ obs.observe(s); });
+  }
+  // one-click BibTeX copy
+  document.querySelectorAll('.bibcopy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentNode.querySelector('pre');
+      var text = pre.textContent;
+      var done = function(){
+        btn.textContent = 'copied ✓'; btn.classList.add('ok');
+        setTimeout(function(){ btn.textContent = 'copy'; btn.classList.remove('ok'); }, 1400);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta); done();
+      }
+    });
+  });
+  // theme toggle
+  var tb = document.querySelector('.themebtn');
+  if(tb){ tb.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    try{ localStorage.setItem('theme', cur); }catch(e){}
+  }); }
+})();
+</script>
 </body>
-
 </html>

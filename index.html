@@ -1,173 +1,242 @@
-
-    <!doctype html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/6f34d50cde.js" crossorigin="anonymous"></script>
-
-  <title>Zilong Chen</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/avatar.jpg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zilong Chen</title>
+<meta name="description" content="Zilong Chen — Ph.D. candidate at Tsinghua University. Multimodal generation, world model.">
+<link rel="icon" type="image/x-icon" href="assets/img/avatar.jpg">
+<script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..700;1,400..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f6f2;--card:#fcfcf8;--ink:#1a1a17;--ink-strong:#0a0a0a;--muted:#5e574a;--soft:#8c8473;--rule:#e3e1d6;--accent:#1f7a4d;
+  --topbar-bg:rgba(246,246,242,0.82);--accent-soft:rgba(31,122,77,0.11);--accent-line:rgba(31,122,77,0.28);--code-bg:#16160f;--code-fg:#e8e3d6;--thumb-bg:#efeee7;}
+:root[data-theme="dark"]{--paper:#14140f;--card:#1d1c16;--ink:#e7e5db;--ink-strong:#f6f4ec;--muted:#a49e8f;--soft:#7c7669;--rule:#2d2b23;--accent:#5cb488;
+  --topbar-bg:rgba(20,20,15,0.82);--accent-soft:rgba(92,180,136,0.15);--accent-line:rgba(92,180,136,0.38);--code-bg:#0e0e0a;--code-fg:#e8e3d6;--thumb-bg:#26251d;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;transition:background-color .25s ease,color .25s ease;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+::selection{background:var(--ink);color:var(--paper);}
+.wrap{max-width:860px;margin:0 auto;padding:40px 28px 72px;}
+/* sticky top nav */
+.topbar{position:sticky;top:0;z-index:50;background:var(--topbar-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);}
+.topbar-inner{max-width:860px;margin:0 auto;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{font-weight:700;font-size:15px;letter-spacing:-0.02em;color:var(--ink-strong);}
+.brand:hover{color:var(--accent);text-decoration:none;}
+.navlinks{display:flex;gap:3px;align-items:center;}
+.navlinks a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);padding:6px 11px;border-radius:100px;white-space:nowrap;transition:color .15s,background .15s;}
+.navlinks a:hover{color:var(--accent);text-decoration:none;}
+.navlinks a.active{color:var(--ink-strong);background:var(--accent-soft);}
+.navlinks a.cv{color:var(--accent);}
+.themebtn{margin-left:4px;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--rule);border-radius:100px;background:transparent;color:var(--muted);cursor:pointer;transition:color .15s,border-color .15s;}
+.themebtn:hover{color:var(--accent);border-color:var(--accent);}
+.themebtn .ic{width:15px;height:15px;}
+.themebtn .sun{display:none;}
+:root[data-theme="dark"] .themebtn .sun{display:inline-flex;}
+:root[data-theme="dark"] .themebtn .moon{display:none;}
+section[id],header[id]{scroll-margin-top:64px;}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 168px;gap:32px;align-items:start;}
+.name{font-size:clamp(2rem,5.2vw,3rem);font-weight:700;letter-spacing:-0.03em;line-height:1.0;margin:0 0 10px;color:var(--ink-strong);}
+.role{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);margin:0 0 3px;letter-spacing:0.01em;}
+.interests{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);margin:0 0 16px;}
+.bio{margin:0 0 16px;color:var(--ink);}
+.bio a{font-weight:500;}
+.photo-wrap{justify-self:end;}
+.photo{width:168px;height:auto;border-radius:6px;border:1px solid var(--rule);display:block;}
+.links{display:flex;flex-wrap:wrap;gap:8px;}
+.links a{display:inline-flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:100px;padding:7px 14px;transition:border-color .15s,color .15s;}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+.links a .ic{width:15px;height:15px;flex:0 0 auto;}
+/* sections */
+section{margin-top:46px;}
+h2{font-size:1.42rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink-strong);margin:0 0 3px;}
+h2 .extra{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:400;color:var(--soft);letter-spacing:0;}
+h2 .extra a{color:var(--muted);}
+.sechr{border:none;border-top:1px solid var(--rule);margin:11px 0 24px;}
+/* publications */
+.pub{display:grid;grid-template-columns:196px 1fr;gap:22px;margin:0 0 27px;align-items:start;}
+.pub.nomedia{grid-template-columns:1fr;}
+.pub-body{min-width:0;}
+.pub-thumb img,.pub-thumb video{width:100%;border-radius:4px;border:1px solid var(--rule);display:block;background:var(--thumb-bg);}
+.pub-body .t{font-size:1.02rem;font-weight:600;color:var(--ink-strong);line-height:1.32;}
+.pub-body .t:hover{color:var(--accent);text-decoration:none;}
+.pub-body .au{font-size:0.87rem;color:var(--muted);margin:5px 0 4px;line-height:1.55;}
+.pub-body .au a{color:var(--muted);}
+.pub-body .au a:hover{color:var(--accent);}
+.pub-body .au .me{font-weight:700;color:var(--ink-strong);}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:12px;margin:3px 0 8px;display:flex;align-items:center;flex-wrap:wrap;gap:7px;}
+.meta .venue{font-weight:600;color:var(--ink-strong);}
+.meta .yr{color:var(--muted);}
+.award{font-family:"IBM Plex Mono",monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);padding:2px 8px;border-radius:100px;}
+.plinks{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:8px;}
+.plinks img{vertical-align:middle;height:15px;}
+.plinks .sep{color:var(--rule);}
+details.bib{margin-top:9px;}
+details.bib>summary{font-size:0;cursor:pointer;list-style:none;width:fit-content;}
+details.bib>summary::-webkit-details-marker{display:none;}
+details.bib>summary::before{content:"+ bibtex";font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);}
+details.bib[open]>summary::before{content:"− bibtex";}
+.bibbox{position:relative;margin-top:8px;}
+.bibbox pre{background:var(--code-bg);color:var(--code-fg);font-family:"IBM Plex Mono",monospace;font-size:11.5px;line-height:1.55;padding:14px 16px;border-radius:4px;overflow-x:auto;margin:0;white-space:pre;max-width:100%;}
+.bibcopy{position:absolute;top:8px;right:8px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#cbd5c0;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:4px 8px;cursor:pointer;transition:background .15s,color .15s;}
+.bibcopy:hover{background:rgba(255,255,255,0.18);color:#fff;}
+.bibcopy.ok{color:#7fdda8;border-color:rgba(127,221,168,0.55);}
+/* news */
+.news{list-style:none;margin:0;padding:0;}
+.news li{display:grid;grid-template-columns:84px 1fr;gap:16px;padding:5px 0;font-size:0.97rem;align-items:baseline;}
+.news .nd{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);white-space:nowrap;}
+.news .nc{color:var(--ink);min-width:0;}
+.news .nc b{font-weight:600;color:var(--ink-strong);}
+/* services */
+.svc{font-size:0.96rem;color:var(--ink);line-height:1.95;}
+.svc b{font-weight:600;color:var(--ink-strong);}
+/* full-list page header */
+.fl-head{padding-top:6px;}
+.fl-back{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);}
+.fl-back:hover{color:var(--accent);text-decoration:none;}
+@media(max-width:640px){
+  .wrap{padding:34px 20px 56px;}
+  .topbar-inner{padding:8px 16px;gap:10px;}
+  .navlinks{gap:0;overflow-x:auto;flex-wrap:nowrap;-ms-overflow-style:none;scrollbar-width:none;}
+  .navlinks::-webkit-scrollbar{display:none;}
+  .navlinks a{padding:6px 8px;font-size:11.5px;}
+  .hero{grid-template-columns:1fr;gap:20px;}
+  .photo-wrap{order:-1;justify-self:start;}
+  .photo{width:132px;}
+  .pub{grid-template-columns:1fr;gap:12px;}
+  .pub-thumb{max-width:300px;}
+}
+@media(max-width:460px){
+  .brand{display:none;}
+  .navlinks{width:100%;justify-content:space-between;}
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="row" style="margin-top: 3em;">
-                    <div class="col-sm-12" style="margin-bottom: 1em;">
-                    <h3 class="display-4" style="text-align: center;"><span style="font-weight: bold;">Zilong</span> Chen</h3>
-                    </div>
-                    <br>
-                    <div class="col-md-10" style="">
-                        
-                <p>
-                    I am a Ph.D candidate at Department of Computer Science and Technology, Tsinghua University, where I am advised by <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Prof. Huaping Liu</a> and work closely with <a href="https://wangfeng18.github.io/" target="_blank">Dr. Feng Wang</a> and <a href="https://yikaiw.github.io/" target="_blank">Prof. Yikai Wang</a>. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of <a href="https://gr.xjtu.edu.cn/web/minnluo/" target="_blank">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.
-                </p>
-                <p>
-                    <a href="./cv/rendercv_output/Zilong_Chen_CV.pdf" target="_blank" style="margin-right: 5px"><i class="fa-solid fa-circle-user"></i> Resume</a>|
-                    <a href="mailto:jaysonabcchen@gmail.com" style="margin-right: 5px"><i class="fa-regular fa-envelope fa-lg"></i> Email</a>|
-                    <a href="./assets/img/heheyas-wechat.jpg" style="margin-right: 5px"><i class="fab fa-weixin"></i> Wechat</a>|
-                    <a href="https://scholar.google.com.hk/citations?user=2pbka1gAAAAJ&hl=en" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>|
-                    <a href="https://github.com/heheyas" target="_blank" style="margin-right: 5px"><i class="fab fa-github fa-lg"></i> Github</a>|
-                    <a href="https://www.linkedin.com/in/zilong-chen-99671523b/" target="_blank" style="margin-right: 5px"><i class="fa-brands fa-linkedin fa-lg"></i> LinkedIn</a>
-                </p>
-    
-                    </div>
-                    <div class="col-md-2" style="">
-                        <img src="assets/img/avatar.jpg" 
-                        class="img-thumbnail" 
-                        width="280px" 
-                        alt="Profile picture" 
-                        style="float: right;"
-                        onmouseover="this.src='assets/img/zilong_chen.jpg'" 
-                        onmouseout="this.src='assets/img/avatar.jpg'">
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 1em;">
-                    <div class="col-sm-12" style="">
-                        <h4>Selected publications (* indicates equal contribution) [<a href="full_list.html">Full list</a>] [<a href="">Download bibtex</a>]</h4>
-                        <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/meshgen.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://heheyas.github.io/MeshGen" target="_blank">MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation</a> <br><span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="" target="_blank">Wenqiang Sun</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a> <br><span style="font-style: italic;">CVPR</span>, 2025 <span style="color: red; font-weight: bold">(Highlight)</span><br><a href="https://heheyas.github.io/MeshGen" target="_blank">Project Page</a> / <a href="https://www.youtube.com/watch?v=3HO0GuyOJdw&ab_channel=ZilongChen" target="_blank">Video</a> / <a href="https://github.com/heheyas/MeshGen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/MeshGen?style=social"> / <a href="https://arxiv.org/abs/2403.06738" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2025meshgen" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2025meshgen"><div class="card card-body"><pre><code>@InProceedings{chen2025meshgen, 
-	author = {Zilong Chen and Yikai Wang and Wenqiang Sun and Feng Wang and Yiwen Chen and Huaping Liu}, 
-	title = {MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation}, 
-	booktitle = {CVPR}, 
-	year = {2025}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/v3d.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://heheyas.github.io/V3D" target="_blank">V3d: Video diffusion models are effective 3d generators</a> <br><span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a> <br><span style="font-style: italic;">T-PAMI</span>, 2025<br><a href="https://heheyas.github.io/V3D" target="_blank">Project Page</a> / <a href="https://github.com/heheyas/V3D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/V3D?style=social"> / <a href="https://arxiv.org/abs/2403.06738" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2024v3d" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2024v3d"><div class="card card-body"><pre><code>@InProceedings{chen2024v3d, 
-	author = {Zilong Chen and Yikai Wang and Feng Wang and Zhengyi Wang and Huaping Liu}, 
-	title = {V3d: Video diffusion models are effective 3d generators}, 
-	booktitle = {T-PAMI}, 
-	year = {2025}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/gsgen.jpg" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://gsgen3d.github.io/" target="_blank">Text-to-3d using gaussian splatting</a> <br><span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a> <br><span style="font-style: italic;">CVPR</span>, 2024<br><a href="https://gsgen3d.github.io/" target="_blank">Project Page</a> / <a href="https://www.youtube.com/watch?v=bUmOO7puRK4&ab_channel=ZilongChen" target="_blank">Video</a> / <a href="https://github.com/gsgen3d/gsgen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/gsgen3d/gsgen?style=social"> / <a href="https://arxiv.org/abs/2309.16585" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2023text" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2023text"><div class="card card-body"><pre><code>@InProceedings{chen2023text, 
-	author = {Zilong Chen and Feng Wang and Yikai Wang and Huaping Liu}, 
-	title = {Text-to-3d using gaussian splatting}, 
-	booktitle = {CVPR}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/gaussianeditor.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Gaussianeditor: Swift and controllable 3d editing with gaussian splatting</a> <br><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen*</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen*</span>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="http://www.google.com/search?q=Xiaofeng Yang" target="_blank">Xiaofeng Yang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Zhongang Cai" target="_blank">Zhongang Cai</a>, <a href="http://www.google.com/search?q=Lei Yang" target="_blank">Lei Yang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a> <br><span style="font-style: italic;">CVPR</span>, 2024<br><a href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Project Page</a> / <a href="https://www.youtube.com/watch?v=TdZIICSFqsU&ab_channel=YiwenChen" target="_blank">Video</a> / <a href="https://github.com/buaacyw/GaussianEditor" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/GaussianEditor?style=social"> / <a href="https://arxiv.org/abs/2311.14521" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2024gaussianeditor" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2024gaussianeditor"><div class="card card-body"><pre><code>@InProceedings{chen2024gaussianeditor, 
-	author = {Yiwen Chen and Zilong Chen and Chi Zhang and Feng Wang and Xiaofeng Yang and Yikai Wang and Zhongang Cai and Lei Yang and Huaping Liu and Guosheng Lin}, 
-	title = {Gaussianeditor: Swift and controllable 3d editing with gaussian splatting}, 
-	booktitle = {CVPR}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/msth.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://masked-spacetime-hashing.github.io/" target="_blank">Masked space-time hash encoding for efficient dynamic scene reconstruction</a> <br><a href="https://wangfeng18.github.io/" target="_blank">Feng Wang*</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen*</span>, <a href="http://www.google.com/search?q=Guokang Wang" target="_blank">Guokang Wang</a>, <a href="http://www.google.com/search?q=Yafei Song" target="_blank">Yafei Song</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a> <br><span style="font-style: italic;">NeurIPS</span>, 2023 <span style="color: red; font-weight: bold">(Spotlight)</span><br><a href="https://masked-spacetime-hashing.github.io/" target="_blank">Project Page</a> / <a href="https://github.com/masked-spacetime-hashing/msth" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/masked-spacetime-hashing/msth?style=social"> / <a href="https://arxiv.org/abs/2310.17527" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsewang2023masked" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsewang2023masked"><div class="card card-body"><pre><code>@InProceedings{wang2023masked, 
-	author = {Feng Wang and Zilong Chen and Guokang Wang and Yafei Song and Huaping Liu}, 
-	title = {Masked space-time hash encoding for efficient dynamic scene reconstruction}, 
-	booktitle = {NeurIPS}, 
-	year = {2023}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/video4dgen.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://vidu4d-dgs.github.io/" target="_blank">Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization</a> <br><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Guangce Liu" target="_blank">Guangce Liu</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="http://www.google.com/search?q=Jiafang Li" target="_blank">Jiafang Li</a>, <a href="http://www.google.com/search?q=Xin Liang" target="_blank">Xin Liang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a> <br><span style="font-style: italic;">T-PAMI</span>, 2025<br><a href="https://vidu4d-dgs.github.io/" target="_blank">Project Page</a> / <a href="" target="_blank">Video</a> / <a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social"> / <a href="https://arxiv.org/abs/2504.04153" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsewang2025video4dgen" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsewang2025video4dgen"><div class="card card-body"><pre><code>@InProceedings{wang2025video4dgen, 
-	author = {Yikai Wang and Guangce Liu and Xinzhou Wang and Zilong Chen and Jiafang Li and Xin Liang and Fuchun Sun and Jun Zhu}, 
-	title = {Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization}, 
-	booktitle = {T-PAMI}, 
-	year = {2025}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/vidu4d.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://vidu4d-dgs.github.io/" target="_blank">Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels</a> <br><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a> <br><span style="font-style: italic;">NeurIPS</span>, 2024<br><a href="https://vidu4d-dgs.github.io/" target="_blank">Project Page</a> / <a href="" target="_blank">Video</a> / <a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social"> / <a href="https://arxiv.org/abs/2405.16822" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsewang2024vidu4d" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsewang2024vidu4d"><div class="card card-body"><pre><code>@InProceedings{wang2024vidu4d, 
-	author = {Yikai Wang and Xinzhou Wang and Zilong Chen and Zhengyi Wang and Fuchun Sun and Jun Zhu}, 
-	title = {Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels}, 
-	booktitle = {NeurIPS}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/meshanythingv2.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization</a> <br><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Yihao Luo" target="_blank">Yihao Luo</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a> <br><span style="font-style: italic;">arxiv</span>, 2024<br><a href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Project Page</a> / <a href="" target="_blank">Video</a> / <a href="https://github.com/buaacyw/MeshAnythingV2" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/MeshAnythingV2?style=social"> / <a href="https://arxiv.org/abs/2408.02555" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2024meshanything" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2024meshanything"><div class="card card-body"><pre><code>@InProceedings{chen2024meshanything, 
-	author = {Yiwen Chen and Yikai Wang and Yihao Luo and Zhengyi Wang and Zilong Chen and Jun Zhu and Chi Zhang and Guosheng Lin}, 
-	title = {Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization}, 
-	booktitle = {arxiv}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/dimensionx.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://chenshuo20.github.io/DimensionX/" target="_blank">Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion</a> <br><a href="" target="_blank">Wenqiang Sun</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="http://www.google.com/search?q=Fangfu Liu" target="_blank">Fangfu Liu</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="http://www.google.com/search?q=Yueqi Duan" target="_blank">Yueqi Duan</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a> <br><span style="font-style: italic;">arxiv</span>, 2024<br><a href="https://chenshuo20.github.io/DimensionX/" target="_blank">Project Page</a> / <a href="https://youtu.be/ViDQI1HMY2U?si=f1RGd82n6yj6TOFB" target="_blank">Video</a> / <a href="https://github.com/wenqsun/DimensionX" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/DimensionX?style=social"> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesun2024dimensionx" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsesun2024dimensionx"><div class="card card-body"><pre><code>@InProceedings{sun2024dimensionx, 
-	author = {Wenqiang Sun and Shuo Chen and Fangfu Liu and Zilong Chen and Yueqi Duan and Jun Zhang and Yikai Wang}, 
-	title = {Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion}, 
-	booktitle = {arxiv}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/freeplane.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="https://freeplane3d.github.io/" target="_blank">Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models</a> <br><a href="" target="_blank">Wenqiang Sun</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a> <br><span style="font-style: italic;">arxiv</span>, 2024<br><a href="https://freeplane3d.github.io/" target="_blank">Project Page</a> / <a href="https://github.com/wenqsun/Freeplane" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/Freeplane?style=social"> / <a href="https://arxiv.org/pdf/2406.00750" target="_blank">Arxiv</a> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesun2024freeplane" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsesun2024freeplane"><div class="card card-body"><pre><code>@InProceedings{sun2024freeplane, 
-	author = {Wenqiang Sun and Zhengyi Wang and Shuo Chen and Yikai Wang and Zilong Chen and Jun Zhu and Jun Zhang}, 
-	title = {Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models}, 
-	booktitle = {arxiv}, 
-	year = {2024}, 
-}</pre></code></div></div> </div> </div> </div>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 3em;">
-                    <div class="col-sm-12" style="">
-                        <h4>Open-source Projects</h4>
-                        <div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/3dgs.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="http://www.google.com/search?q=3D Gaussian Splatting" target="_blank">3D Gaussian Splatting</a> <br><span style="font-weight: bold; text-decoration:underline";>Zilong Chen</span> <br><span style="font-style: italic;">GitHub open-source project</span>, 2023<br><a href="https://github.com/heheyas/gaussian_splatting_3d" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/gaussian_splatting_3d?style=social"> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2023gaussian" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2023gaussian"><div class="card card-body"><pre><code>@InProceedings{chen2023gaussian, 
-	author = {Zilong Chen}, 
-	title = {3D Gaussian Splatting}, 
-	booktitle = {GitHub open-source project}, 
-	year = {2023}, 
-}</pre></code></div></div> </div> </div> </div><div style="margin-bottom: 3em;"> <div class="row"><div class="col-sm-3"><img src="assets/img/publications/samnerf.png" class="img-fluid img-thumbnail" alt="Project image"></div><div class="col-sm-9"><a href="http://www.google.com/search?q=Segment Anything in NeRF" target="_blank">Segment Anything in NeRF</a> <br><a href="https://wangfeng18.github.io/" target="_blank">Feng Wang*</a>, <span style="font-weight: bold; text-decoration:underline";>Zilong Chen*</span> <br><span style="font-style: italic;">GitHub open-source project</span>, 2023<br><a href="https://github.com/WangFeng18/Segment-Anything-in-NeRF" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/WangFeng18/Segment-Anything-in-NeRF?style=social"> /<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsechen2023samnerf" aria-expanded="false" aria-controls="collapseExample" style="margin-left: -6px; margin-top: -2px;">Expand bibtex</button><div class="collapse" id="collapsechen2023samnerf"><div class="card card-body"><pre><code>@InProceedings{chen2023samnerf, 
-	author = {Feng Wang and Zilong Chen}, 
-	title = {Segment Anything in NeRF}, 
-	booktitle = {GitHub open-source project}, 
-	year = {2023}, 
-}</pre></code></div></div> </div> </div> </div>
-                    </div>
-                </div>
-                <!--
-                <div class="row" style="margin-top: 3em;">
-                    <div class="col-sm-12" style="">
-                        <h4>Talks</h4>
-                        
-                    </div>
-                </div>
-                -->
-                <div class="row" style="margin-top: 3em;">
-                    <div class="col-sm-12" style="">
-                        <h4>Services</h4>
-                        <b>Reviewer for conferences</b>: CVPR, NeurIPS, ICLR, ICML, ICCV, AAAI, ACL, IROS, ICRA</br>
-                        <b>Reviewer for journals</b>: T-PAMI, Neurocomputing, TIP, JMLR</br>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 3em; margin-bottom: 1em;">
-                    
-            <div class="col-sm-12" style="">
-                <h4>Acknowledgement</h4>
-                <p>
-                    This website is built based on <a href="https://m-niemeyer.github.io/" target="_blank">Michael Niemeyer's</a> personal website. Thanks for his open-source code.
-                </p>
-            </div>
-    
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div?
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-    <script src="./common.js"></script>
+<nav class="topbar"><div class="topbar-inner"><a class="brand" href="#about">Zilong Chen</a><div class="navlinks"><a href="#news">News</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#services">Services</a><a class="cv" href="./cv/rendercv_output/Zilong_Chen_CV.pdf" target="_blank">CV &#8599;</a><button class="themebtn" type="button" aria-label="Toggle theme"><svg class="ic sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button></div></div></nav>
+<main class="wrap">
+<header class="hero" id="about"><div class="hero-text"><h1 class="name">Zilong Chen</h1><p class="role">Ph.D. Candidate &middot; Tsinghua University</p><p class="interests">multimodal generation &middot; world model</p><p class="bio">I am a Ph.D. candidate at the Department of Computer Science and Technology, Tsinghua University, advised by <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Prof. Huaping Liu</a> and working closely with <a href="https://wangfeng18.github.io/" target="_blank">Dr. Feng Wang</a> and <a href="https://yikaiw.github.io/" target="_blank">Prof. Yikai Wang</a>. Before Tsinghua, I completed my undergraduate studies at Xi'an Jiaotong University under <a href="https://gr.xjtu.edu.cn/web/minnluo/" target="_blank">Prof. Minnan Luo</a>, focusing on knowledge graphs and their applications in natural language processing.</p><nav class="links"><a href="./cv/rendercv_output/Zilong_Chen_CV.pdf" target="_blank"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>CV</a><a href="mailto:jaysonabcchen@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a><a href="https://scholar.google.com.hk/citations?user=2pbka1gAAAAJ&hl=en" target="_blank"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4.5 2 9l10 4.5L22 9z"/><path d="M6 11v5c0 1.1 2.7 2.6 6 2.6s6-1.5 6-2.6v-5"/></svg>Scholar</a><a href="https://github.com/heheyas" target="_blank"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.3-4-2.3-5.6-2.7M15 21v-3.3c0-.9-.3-1.6-.8-2 2.7-.3 5.4-1.3 5.4-5.9 0-1.3-.5-2.4-1.2-3.2.1-.3.5-1.5-.1-3.1 0 0-1-.3-3.3 1.2a11 11 0 0 0-5.6 0C6.5 1.5 5.5 1.8 5.5 1.8c-.6 1.6-.2 2.8-.1 3.1-.7.8-1.2 1.9-1.2 3.2 0 4.6 2.7 5.6 5.4 5.9-.4.4-.7.9-.8 1.7"/></svg>GitHub</a><a href="https://x.com/heheyChen" target="_blank"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>X</a><a href="https://www.linkedin.com/in/zilong-chen-99671523b/" target="_blank"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4z"/></svg>LinkedIn</a><a href="./assets/img/heheyas-wechat.jpg"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>WeChat</a></nav></div><div class="photo-wrap"><img class="photo" src="assets/img/avatar.jpg" alt="Zilong Chen" onmouseover="this.src='assets/img/zilong_chen.jpg'" onmouseout="this.src='assets/img/avatar.jpg'"></div></header><section id="news"><h2>News</h2><hr class="sechr"><ul class="news"><li><span class="nd">Mar 2025</span><span class="nc">MeshGen accepted to CVPR 2025 as a <b>Highlight</b>.</span></li><li><span class="nd">Jan 2025</span><span class="nc">V3D accepted to <b>T-PAMI</b>.</span></li><li><span class="nd">Sep 2024</span><span class="nc">Vidu4D accepted to NeurIPS 2024.</span></li><li><span class="nd">Feb 2024</span><span class="nc">GSGEN and GaussianEditor accepted to CVPR 2024.</span></li><li><span class="nd">Sep 2023</span><span class="nc">MSTH accepted to NeurIPS 2023 as a <b>Spotlight</b>.</span></li></ul></section><section id="publications"><h2>Selected publications <span class="extra">[<a href="full_list.html">full list</a>] &middot; * equal contribution</span></h2><hr class="sechr"><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/vqvaworld.jpg" alt="VQ-VA World: Towards High-Quality Visual Question-Visual Answering"></div><div class="pub-body"><a class="t" href="https://chenhuigou.github.io/VQ-VA-World/" target="_blank">VQ-VA World: Towards High-Quality Visual Question-Visual Answering</a><div class="au"><a href="http://www.google.com/search?q=Chenhui Gou" target="_blank">Chenhui Gou*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Zeyu Wang" target="_blank">Zeyu Wang*</a>, <a href="http://www.google.com/search?q=Feng Li" target="_blank">Feng Li</a>, <a href="http://www.google.com/search?q=Deyao Zhu" target="_blank">Deyao Zhu</a>, <a href="http://www.google.com/search?q=Zicheng Duan" target="_blank">Zicheng Duan</a>, <a href="http://www.google.com/search?q=Kunchang Li" target="_blank">Kunchang Li</a>, <a href="http://www.google.com/search?q=Chaorui Deng" target="_blank">Chaorui Deng</a>, <a href="http://www.google.com/search?q=Hongyi Yuan" target="_blank">Hongyi Yuan</a>, <a href="http://www.google.com/search?q=Haoqi Fan" target="_blank">Haoqi Fan</a>, <a href="http://www.google.com/search?q=Cihang Xie" target="_blank">Cihang Xie</a>, <a href="http://www.google.com/search?q=Jianfei Cai" target="_blank">Jianfei Cai</a>, <a href="http://www.google.com/search?q=Hamid Rezatofighi" target="_blank">Hamid Rezatofighi</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2026</span></div><div class="plinks"><a href="https://chenhuigou.github.io/VQ-VA-World/" target="_blank">Project</a><span class="sep">·</span><a href="https://arxiv.org/abs/2511.20573" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{gou2026vqvaworld,
+  author = {Chenhui Gou and Zilong Chen and Zeyu Wang and Feng Li and Deyao Zhu and Zicheng Duan and Kunchang Li and Chaorui Deng and Hongyi Yuan and Haoqi Fan and Cihang Xie and Jianfei Cai and Hamid Rezatofighi},
+  title = {VQ-VA World: Towards High-Quality Visual Question-Visual Answering},
+  booktitle = {CVPR},
+  year = {2026},
+}</pre></div></details></div></div><div class="pub nomedia"><div class="pub-body"><a class="t" href="http://www.google.com/search?q=LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation" target="_blank">LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation</a><div class="au"><a href="http://www.google.com/search?q=Zeyu Wang" target="_blank">Zeyu Wang*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Chenhui Gou" target="_blank">Chenhui Gou*</a>, <a href="http://www.google.com/search?q=Feng Li" target="_blank">Feng Li</a>, <a href="http://www.google.com/search?q=Chaorui Deng" target="_blank">Chaorui Deng</a>, <a href="http://www.google.com/search?q=Deyao Zhu" target="_blank">Deyao Zhu</a>, <a href="http://www.google.com/search?q=Kunchang Li" target="_blank">Kunchang Li</a>, <a href="http://www.google.com/search?q=Weihao Yu" target="_blank">Weihao Yu</a>, <a href="http://www.google.com/search?q=Haoqin Tu" target="_blank">Haoqin Tu</a>, <a href="http://www.google.com/search?q=Haoqi Fan" target="_blank">Haoqi Fan</a>, <a href="http://www.google.com/search?q=Cihang Xie" target="_blank">Cihang Xie</a></div><div class="meta"><span class="venue">ECCV</span> <span class="yr">2026</span></div><div class="plinks"><a href="https://arxiv.org/abs/2510.22946" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2026lightfusion,
+  author = {Zeyu Wang and Zilong Chen and Chenhui Gou and Feng Li and Chaorui Deng and Deyao Zhu and Kunchang Li and Weihao Yu and Haoqin Tu and Haoqi Fan and Cihang Xie},
+  title = {LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation},
+  booktitle = {ECCV},
+  year = {2026},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/meshgen.png" alt="MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation"></div><div class="pub-body"><a class="t" href="https://heheyas.github.io/MeshGen" target="_blank">MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2025</span><span class="award">Highlight</span></div><div class="plinks"><a href="https://heheyas.github.io/MeshGen" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=3HO0GuyOJdw&ab_channel=ZilongChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/heheyas/MeshGen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/MeshGen?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2403.06738" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2025meshgen,
+  author = {Zilong Chen and Yikai Wang and Wenqiang Sun and Feng Wang and Yiwen Chen and Huaping Liu},
+  title = {MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation},
+  booktitle = {CVPR},
+  year = {2025},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/v3d.png" alt="V3d: Video diffusion models are effective 3d generators"></div><div class="pub-body"><a class="t" href="https://heheyas.github.io/V3D" target="_blank">V3d: Video diffusion models are effective 3d generators</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">T-PAMI</span> <span class="yr">2025</span></div><div class="plinks"><a href="https://heheyas.github.io/V3D" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/heheyas/V3D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/V3D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2403.06738" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024v3d,
+  author = {Zilong Chen and Yikai Wang and Feng Wang and Zhengyi Wang and Huaping Liu},
+  title = {V3d: Video diffusion models are effective 3d generators},
+  booktitle = {T-PAMI},
+  year = {2025},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/gsgen.jpg" alt="Text-to-3d using gaussian splatting"></div><div class="pub-body"><a class="t" href="https://gsgen3d.github.io/" target="_blank">Text-to-3d using gaussian splatting</a><div class="au"><span class="me">Zilong Chen</span>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://gsgen3d.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=bUmOO7puRK4&ab_channel=ZilongChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/gsgen3d/gsgen" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/gsgen3d/gsgen?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2309.16585" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2023text,
+  author = {Zilong Chen and Feng Wang and Yikai Wang and Huaping Liu},
+  title = {Text-to-3d using gaussian splatting},
+  booktitle = {CVPR},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/gaussianeditor.png" alt="Gaussianeditor: Swift and controllable 3d editing with gaussian splatting"></div><div class="pub-body"><a class="t" href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Gaussianeditor: Swift and controllable 3d editing with gaussian splatting</a><div class="au"><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="https://wangfeng18.github.io/" target="_blank">Feng Wang</a>, <a href="http://www.google.com/search?q=Xiaofeng Yang" target="_blank">Xiaofeng Yang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Zhongang Cai" target="_blank">Zhongang Cai</a>, <a href="http://www.google.com/search?q=Lei Yang" target="_blank">Lei Yang</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a></div><div class="meta"><span class="venue">CVPR</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://buaacyw.github.io/gaussian-editor/" target="_blank">Project</a><span class="sep">·</span><a href="https://www.youtube.com/watch?v=TdZIICSFqsU&ab_channel=YiwenChen" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/buaacyw/GaussianEditor" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/GaussianEditor?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2311.14521" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024gaussianeditor,
+  author = {Yiwen Chen and Zilong Chen and Chi Zhang and Feng Wang and Xiaofeng Yang and Yikai Wang and Zhongang Cai and Lei Yang and Huaping Liu and Guosheng Lin},
+  title = {Gaussianeditor: Swift and controllable 3d editing with gaussian splatting},
+  booktitle = {CVPR},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/msth.png" alt="Masked space-time hash encoding for efficient dynamic scene reconstruction"></div><div class="pub-body"><a class="t" href="https://masked-spacetime-hashing.github.io/" target="_blank">Masked space-time hash encoding for efficient dynamic scene reconstruction</a><div class="au"><a href="https://wangfeng18.github.io/" target="_blank">Feng Wang*</a>, <span class="me">Zilong Chen*</span>, <a href="http://www.google.com/search?q=Guokang Wang" target="_blank">Guokang Wang</a>, <a href="http://www.google.com/search?q=Yafei Song" target="_blank">Yafei Song</a>, <a href="https://sites.google.com/site/thuliuhuaping/home" target="_blank">Huaping Liu</a></div><div class="meta"><span class="venue">NeurIPS</span> <span class="yr">2023</span><span class="award">Spotlight</span></div><div class="plinks"><a href="https://masked-spacetime-hashing.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/masked-spacetime-hashing/msth" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/masked-spacetime-hashing/msth?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2310.17527" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2023masked,
+  author = {Feng Wang and Zilong Chen and Guokang Wang and Yafei Song and Huaping Liu},
+  title = {Masked space-time hash encoding for efficient dynamic scene reconstruction},
+  booktitle = {NeurIPS},
+  year = {2023},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/video4dgen.png" alt="Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization"></div><div class="pub-body"><a class="t" href="https://vidu4d-dgs.github.io/" target="_blank">Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization</a><div class="au"><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Guangce Liu" target="_blank">Guangce Liu</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jiafang Li" target="_blank">Jiafang Li</a>, <a href="http://www.google.com/search?q=Xin Liang" target="_blank">Xin Liang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a></div><div class="meta"><span class="venue">T-PAMI</span> <span class="yr">2025</span></div><div class="plinks"><a href="https://vidu4d-dgs.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2504.04153" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2025video4dgen,
+  author = {Yikai Wang and Guangce Liu and Xinzhou Wang and Zilong Chen and Jiafang Li and Xin Liang and Fuchun Sun and Jun Zhu},
+  title = {Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization},
+  booktitle = {T-PAMI},
+  year = {2025},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/vidu4d.png" alt="Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels"></div><div class="pub-body"><a class="t" href="https://vidu4d-dgs.github.io/" target="_blank">Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels</a><div class="au"><a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Xinzhou Wang" target="_blank">Xinzhou Wang</a>, <span class="me">Zilong Chen</span>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Fuchun Sun" target="_blank">Fuchun Sun</a>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a></div><div class="meta"><span class="venue">NeurIPS</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://vidu4d-dgs.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/yikaiw/Vidu4D" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/yikaiw/Vidu4D?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2405.16822" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{wang2024vidu4d,
+  author = {Yikai Wang and Xinzhou Wang and Zilong Chen and Zhengyi Wang and Fuchun Sun and Jun Zhu},
+  title = {Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels},
+  booktitle = {NeurIPS},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/meshanythingv2.png" alt="Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization"></div><div class="pub-body"><a class="t" href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization</a><div class="au"><a href="https://buaacyw.github.io/" target="_blank">Yiwen Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <a href="http://www.google.com/search?q=Yihao Luo" target="_blank">Yihao Luo</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Chi Zhang" target="_blank">Chi Zhang</a>, <a href="http://www.google.com/search?q=Guosheng Lin" target="_blank">Guosheng Lin</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://buaacyw.github.io/meshanything-v2/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/buaacyw/MeshAnythingV2" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/buaacyw/MeshAnythingV2?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/abs/2408.02555" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2024meshanything,
+  author = {Yiwen Chen and Yikai Wang and Yihao Luo and Zhengyi Wang and Zilong Chen and Jun Zhu and Chi Zhang and Guosheng Lin},
+  title = {Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/dimensionx.png" alt="Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion"></div><div class="pub-body"><a class="t" href="https://chenshuo20.github.io/DimensionX/" target="_blank">Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion</a><div class="au"><a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="http://www.google.com/search?q=Fangfu Liu" target="_blank">Fangfu Liu</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Yueqi Duan" target="_blank">Yueqi Duan</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://chenshuo20.github.io/DimensionX/" target="_blank">Project</a><span class="sep">·</span><a href="https://youtu.be/ViDQI1HMY2U?si=f1RGd82n6yj6TOFB" target="_blank">Video</a><span class="sep">·</span><a href="https://github.com/wenqsun/DimensionX" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/DimensionX?style=social" alt="stars"></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{sun2024dimensionx,
+  author = {Wenqiang Sun and Shuo Chen and Fangfu Liu and Zilong Chen and Yueqi Duan and Jun Zhang and Yikai Wang},
+  title = {Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/freeplane.png" alt="Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models"></div><div class="pub-body"><a class="t" href="https://freeplane3d.github.io/" target="_blank">Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models</a><div class="au"><a href="http://www.google.com/search?q=Wenqiang Sun" target="_blank">Wenqiang Sun</a>, <a href="https://thuwzy.github.io/" target="_blank">Zhengyi Wang</a>, <a href="http://www.google.com/search?q=Shuo Chen" target="_blank">Shuo Chen</a>, <a href="https://yikaiw.github.io/" target="_blank">Yikai Wang</a>, <span class="me">Zilong Chen</span>, <a href="http://www.google.com/search?q=Jun Zhu" target="_blank">Jun Zhu</a>, <a href="http://www.google.com/search?q=Jun Zhang" target="_blank">Jun Zhang</a></div><div class="meta"><span class="venue">arxiv</span> <span class="yr">2024</span></div><div class="plinks"><a href="https://freeplane3d.github.io/" target="_blank">Project</a><span class="sep">·</span><a href="https://github.com/wenqsun/Freeplane" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/wenqsun/Freeplane?style=social" alt="stars"><span class="sep">·</span><a href="https://arxiv.org/pdf/2406.00750" target="_blank">arXiv</a></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{sun2024freeplane,
+  author = {Wenqiang Sun and Zhengyi Wang and Shuo Chen and Yikai Wang and Zilong Chen and Jun Zhu and Jun Zhang},
+  title = {Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models},
+  booktitle = {arxiv},
+  year = {2024},
+}</pre></div></details></div></div></section><section id="projects"><h2>Open-source projects</h2><hr class="sechr"><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/3dgs.png" alt="3D Gaussian Splatting"></div><div class="pub-body"><a class="t" href="http://www.google.com/search?q=3D Gaussian Splatting" target="_blank">3D Gaussian Splatting</a><div class="au"><span class="me">Zilong Chen</span></div><div class="meta"><span class="venue">GitHub open-source project</span> <span class="yr">2023</span></div><div class="plinks"><a href="https://github.com/heheyas/gaussian_splatting_3d" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/heheyas/gaussian_splatting_3d?style=social" alt="stars"></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2023gaussian,
+  author = {Zilong Chen},
+  title = {3D Gaussian Splatting},
+  booktitle = {GitHub open-source project},
+  year = {2023},
+}</pre></div></details></div></div><div class="pub"><div class="pub-thumb"><img src="assets/img/publications/samnerf.png" alt="Segment Anything in NeRF"></div><div class="pub-body"><a class="t" href="http://www.google.com/search?q=Segment Anything in NeRF" target="_blank">Segment Anything in NeRF</a><div class="au"><a href="https://wangfeng18.github.io/" target="_blank">Feng Wang*</a>, <span class="me">Zilong Chen*</span></div><div class="meta"><span class="venue">GitHub open-source project</span> <span class="yr">2023</span></div><div class="plinks"><a href="https://github.com/WangFeng18/Segment-Anything-in-NeRF" target="_blank">Code</a> <img src="https://img.shields.io/github/stars/WangFeng18/Segment-Anything-in-NeRF?style=social" alt="stars"></div><details class="bib"><summary>bibtex</summary><div class="bibbox"><button class="bibcopy" type="button">copy</button><pre>@InProceedings{chen2023samnerf,
+  author = {Feng Wang and Zilong Chen},
+  title = {Segment Anything in NeRF},
+  booktitle = {GitHub open-source project},
+  year = {2023},
+}</pre></div></details></div></div></section><section id="services"><h2>Services</h2><hr class="sechr"><div class="svc"><b>Conference reviewer</b> &nbsp; CVPR &middot; NeurIPS &middot; ICLR &middot; ICML &middot; ICCV &middot; AAAI &middot; ACL &middot; IROS &middot; ICRA<br><b>Journal reviewer</b> &nbsp;&nbsp;&nbsp; T-PAMI &middot; Neurocomputing &middot; TIP &middot; JMLR</div></section>
+</main>
+<script>
+(function(){
+  // active-section highlight (only fires when in-page #anchors exist)
+  var links = {};
+  document.querySelectorAll('.navlinks a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  if(Object.keys(links).length){
+    var obs = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          for(var k in links) links[k].classList.remove('active');
+          if(links[e.target.id]) links[e.target.id].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    document.querySelectorAll('section[id]').forEach(function(s){ obs.observe(s); });
+  }
+  // one-click BibTeX copy
+  document.querySelectorAll('.bibcopy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentNode.querySelector('pre');
+      var text = pre.textContent;
+      var done = function(){
+        btn.textContent = 'copied ✓'; btn.classList.add('ok');
+        setTimeout(function(){ btn.textContent = 'copy'; btn.classList.remove('ok'); }, 1400);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta); done();
+      }
+    });
+  });
+  // theme toggle
+  var tb = document.querySelector('.themebtn');
+  if(tb){ tb.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    try{ localStorage.setItem('theme', cur); }catch(e){}
+  }); }
+})();
+</script>
 </body>
-
 </html>
-    
