@@ -1,4 +1,46 @@
-- title: '[1] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
+- title: '[1] Scaling Properties of Text Conditioning in Visual Generation'
+  authors:
+  - '**#underline[Zilong Chen]**'
+  - Chaorui Deng
+  - Kunchang Li
+  - Hongyi Yuan
+  - Haoqi Fan
+  date: ByteDance Seed 2026
+  url: https://heheyas.github.io/context-scaling/
+- title: '[2] VQ-VA World: Towards High-Quality Visual Question-Visual Answering'
+  authors:
+  - Chenhui Gou=
+  - '**#underline[Zilong Chen]=**'
+  - Zeyu Wang=
+  - Feng Li
+  - Deyao Zhu
+  - Zicheng Duan
+  - Kunchang Li
+  - Chaorui Deng
+  - Hongyi Yuan
+  - Haoqi Fan
+  - Cihang Xie
+  - Jianfei Cai
+  - Hamid Rezatofighi
+  date: CVPR 2026
+  url: https://chenhuigou.github.io/VQ-VA-World/
+- title: '[3] LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal
+    Understanding and Generation'
+  authors:
+  - Zeyu Wang=
+  - '**#underline[Zilong Chen]=**'
+  - Chenhui Gou=
+  - Feng Li
+  - Chaorui Deng
+  - Deyao Zhu
+  - Kunchang Li
+  - Weihao Yu
+  - Haoqin Tu
+  - Haoqi Fan
+  - Cihang Xie
+  date: ECCV 2026
+  url: https://arxiv.org/abs/2510.22946
+- title: '[4] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
     and Generative Data Augmentation'
   authors:
   - '**#underline[Zilong Chen]**'
@@ -9,7 +51,7 @@
   - Huaping Liu
   date: CVPR 2025 (**Highlight**)
   url: https://heheyas.github.io/MeshGen
-- title: '[2] V3d: Video diffusion models are effective 3D generators'
+- title: '[5] V3d: Video diffusion models are effective 3D generators'
   authors:
   - '**#underline[Zilong Chen]**'
   - Yikai Wang
@@ -18,7 +60,7 @@
   - Huaping Liu
   date: T-PAMI 2025
   url: https://heheyas.github.io/V3D
-- title: '[3] Text-to-3d using gaussian splatting'
+- title: '[6] Text-to-3d using gaussian splatting'
   authors:
   - '**#underline[Zilong Chen]**'
   - Feng Wang
@@ -26,7 +68,7 @@
   - Huaping Liu
   date: CVPR 2024
   url: https://gsgen3d.github.io/
-- title: '[4] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting'
+- title: '[7] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting'
   authors:
   - Yiwen Chen=
   - '**#underline[Zilong Chen]=**'
@@ -40,7 +82,7 @@
   - Guosheng Lin
   date: CVPR 2024
   url: https://buaacyw.github.io/gaussian-editor/
-- title: '[5] Masked space-time hash encoding for efficient dynamic scene reconstruction'
+- title: '[8] Masked space-time hash encoding for efficient dynamic scene reconstruction'
   authors:
   - Feng Wang=
   - '**#underline[Zilong Chen]=**'
@@ -49,7 +91,7 @@
   - Huaping Liu
   date: NeurIPS 2023 (**Spotlight**)
   url: https://masked-spacetime-hashing.github.io/
-- title: '[6] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization'
+- title: '[9] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization'
   authors:
   - Yikai Wang
   - Guangce Liu
@@ -61,7 +103,7 @@
   - Jun Zhu
   date: T-PAMI 2025
   url: https://vidu4d-dgs.github.io/
-- title: '[7] Vidu4d: Single generated video to high-fidelity 4d reconstruction with
+- title: '[10] Vidu4d: Single generated video to high-fidelity 4d reconstruction with
     dynamic gaussian surfels'
   authors:
   - Yikai Wang
@@ -72,7 +114,8 @@
   - Jun Zhu
   date: NeurIPS 2024
   url: https://vidu4d-dgs.github.io/
-- title: '[8] Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization'
+- title: '[11] Meshanything v2: Artist-created mesh generation with adjacent mesh
+    tokenization'
   authors:
   - Yiwen Chen
   - Yikai Wang
@@ -84,7 +127,7 @@
   - Guosheng Lin
   date: arxiv 2024
   url: https://buaacyw.github.io/meshanything-v2/
-- title: '[9] Dimensionx: Create any 3d and 4d scenes from a single image with controllable
+- title: '[12] Dimensionx: Create any 3d and 4d scenes from a single image with controllable
     video diffusion'
   authors:
   - Wenqiang Sun
@@ -96,7 +139,7 @@
   - Yikai Wang
   date: arxiv 2024
   url: https://chenshuo20.github.io/DimensionX/
-- title: '[10] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
+- title: '[13] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
     Models'
   authors:
   - Wenqiang Sun
@@ -108,7 +151,7 @@
   - Jun Zhang
   date: arxiv 2024
   url: https://freeplane3d.github.io/
-- title: '[11] Twibot-22: Towards graph-based twitter bot detection'
+- title: '[14] Twibot-22: Towards graph-based twitter bot detection'
   authors:
   - Shangbin Feng=
   - Zhaoxuan Tan=
@@ -122,14 +165,14 @@
   - Shujie Yang
   - others
   date: NeurIPS 2022
-- title: '[12] Knowledge graph augmented political perspective detection in news media'
+- title: '[15] Knowledge graph augmented political perspective detection in news media'
   authors:
   - Shangbin Feng
   - '**#underline[Zilong Chen]**'
   - Qingyao Li
   - Minnan Luo
   date: arxiv 2021
-- title: '[13] Encoding heterogeneous social and political context for entity stance
+- title: '[16] Encoding heterogeneous social and political context for entity stance
     prediction'
   authors:
   - Shangbin Feng
@@ -137,7 +180,7 @@
   - Peisheng Yu
   - Minnan Luo
   date: arxiv 2021
-- title: '[14] KCD: Knowledge walks and textual cues enhanced political perspective
+- title: '[17] KCD: Knowledge walks and textual cues enhanced political perspective
     detection in news media'
   authors:
   - Wenqian Zhang=
@@ -147,7 +190,7 @@
   - Jundong Li
   - Minnan Luo
   date: NAACL 2022 (**Oral**)
-- title: '[15] BIC: Twitter bot detection with text-graph interaction and semantic
+- title: '[18] BIC: Twitter bot detection with text-graph interaction and semantic
     consistency'
   authors:
   - Zhenyu Lei
@@ -159,7 +202,7 @@
   - Qinghua Zheng
   - Minnan Luo
   date: ACL 2023
-- title: '[16] KRACL: Contrastive learning with graph context modeling for sparse
+- title: '[19] KRACL: Contrastive learning with graph context modeling for sparse
     knowledge graph completion'
   authors:
   - Zhaoxuan Tan
@@ -170,7 +213,7 @@
   - Jundong Li
   - Minnan Luo
   date: WWW 2023
-- title: '[17] Kgap: Knowledge graph augmented political perspective detection in
+- title: '[20] Kgap: Knowledge graph augmented political perspective detection in
     news media'
   authors:
   - Shangbin Feng
@@ -181,7 +224,7 @@
   - Xiaojun Chang
   - Minnan Luo
   date: arxiv 2021
-- title: '[18] PAR: Political Actor Representation Learning with Social Context and
+- title: '[21] PAR: Political Actor Representation Learning with Social Context and
     Expert Knowledge'
   authors:
   - Shangbin Feng

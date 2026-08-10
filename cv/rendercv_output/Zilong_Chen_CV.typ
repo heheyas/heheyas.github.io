@@ -3,10 +3,9 @@
 
 #let name = "Zilong Chen"
 #let locale-catalog-page-numbering-style = context { "Zilong Chen - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in June 2025"
+#let locale-catalog-last-updated-date-style = "Last updated in Aug 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
-#let design-section-titles-font-size = 1.4em
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
 #let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
@@ -17,7 +16,7 @@
 #let design-section-titles-bold = true
 #let design-section-titles-line-thickness = 0.5pt
 #let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "with-parial-line"
+#let design-section-titles-type = "with-partial-line"
 #let design-section-titles-vertical-space-above = 0.5cm
 #let design-section-titles-vertical-space-below = 0.3cm
 #let design-section-titles-small-caps = false
@@ -32,6 +31,7 @@
 #let design-header-name-font-family = "Source Sans 3"
 #let design-header-name-font-size = 30pt
 #let design-header-name-bold = true
+#let design-header-small-caps-for-name = false
 #let design-header-connections-font-family = "Source Sans 3"
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
@@ -41,15 +41,16 @@
 #let design-header-alignment = center
 #let design-highlights-summary-left-margin = 0cm
 #let design-highlights-bullet = "•"
+#let design-highlights-nested-bullet = "-"
 #let design-highlights-top-margin = 0.25cm
 #let design-highlights-left-margin = 0.4cm
 #let design-highlights-vertical-space-between-highlights = 0.25cm
 #let design-highlights-horizontal-space-between-bullet-and-highlights = 0.5em
 #let design-entries-vertical-space-between-entries = 1.2em
-#let design-entries-date-and-location-width = 4.15cm
+#let design-entries-date-and-location-width = 0.01cm
 #let design-entries-allow-page-break-in-entries = true
-#let design-entries-horizontal-space-between-columns = 0.1cm
-#let design-entries-left-and-right-margin = 0.2cm
+#let design-entries-horizontal-space-between-columns = 0cm
+#let design-entries-left-and-right-margin = 0.1cm
 #let design-page-top-margin = 2cm
 #let design-page-bottom-margin = 2cm
 #let design-page-left-margin = 2cm
@@ -125,13 +126,22 @@
   )
 }
 #show list: set list(
-  marker: design-highlights-bullet,
-  spacing: 0pt,
+  marker: design-highlights-nested-bullet,
+  spacing: design-highlights-vertical-space-between-highlights,
   indent: 0pt,
   body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
 )
 
 // Entry utilities:
+#let bullet-entry(..content) = {
+  list(
+    ..content,
+    marker: design-highlights-bullet,
+    spacing: 0pt,
+    indent: 0pt,
+    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+  )
+}
 #let three-col(
   left-column-width: 1fr,
   middle-column-width: 1fr,
@@ -192,7 +202,11 @@
     size: design-header-name-font-size,
     fill: design-colors-name,
   )
-  #it.body
+  #if design-header-small-caps-for-name [
+    #smallcaps(it.body)
+  ] else [
+    #it.body
+  ]
   // Vertical space after the name
   #v(design-header-vertical-space-between-name-and-connections)
 ]
@@ -243,7 +257,7 @@
         #box(
           [
             #section-title
-            #if design-section-titles-type == "with-parial-line" [
+            #if design-section-titles-type == "with-partial-line" [
               #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
             ] else if design-section-titles-type == "with-full-line" [
 
@@ -467,22 +481,23 @@
 
 
 #one-col-entry(
-  content: [I am interested in multimodal generation. Previously, my primary research focused on 3D reconstruction and generation. I am a Ph.D student at Department of Computer Science and Technology, Tsinghua University, where I am advised by #link("https://sites.google.com/site/thuliuhuaping")[Prof. Huaping Liu]. Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of #link("https://gr.xjtu.edu.cn/web/minnluo")[Prof. Minnan Luo], focusing on knowledge graphs and their applications in natural language processing.]
+  content: [I work on multimodal generation, currently on turning the text interface of a generative model into something that can be measured and scaled. My earlier work covers 3D and 4D reconstruction and generation, including text-to-3D with Gaussian splatting, video diffusion models as 3D generators, and native mesh generation, published at CVPR, NeurIPS, and T-PAMI. Before Tsinghua I worked on knowledge graphs and their applications in natural language processing.]
 )
 
 
 == Education
 
 
-// YES DATE, YES DEGREE
-#three-col-entry(
+// NO DATE, YES DEGREE
+#two-col-entry(
   left-column-width: 1cm,
-  left-content: [#strong[PhD]],
-  middle-content: [
-    #strong[Tsinghua University], Computer Science
+  right-column-width: 1fr,
+  alignments: (left, left),
+  left-content: [
+    #strong[PhD]
   ],
   right-content: [
-    Sept 2022 – present
+    #strong[Tsinghua University], Computer Science (#emph[Sept 2022 – present])
   ],
 )
 #block(
@@ -497,15 +512,16 @@
 )
 
 #v(design-entries-vertical-space-between-entries)
-// YES DATE, YES DEGREE
-#three-col-entry(
+// NO DATE, YES DEGREE
+#two-col-entry(
   left-column-width: 1cm,
-  left-content: [#strong[BS]],
-  middle-content: [
-    #strong[Xi'an Jiaotong University], Physics
+  right-column-width: 1fr,
+  alignments: (left, left),
+  left-content: [
+    #strong[BS]
   ],
   right-content: [
-    Sept 2018 – July 2022
+    #strong[Xi'an Jiaotong University], Physics (#emph[Sept 2018 – July 2022])
   ],
 )
 #block(
@@ -524,17 +540,80 @@
 == Experience
 
 
-#two-col-entry(
-  left-content: [
-    #strong[Shengshu Inc.], Research intern on video and 3D generation
+
+#one-col-entry(
+  content: [
+    #strong[ByteDance Seed.], Top Seed intern on multimodal generation, led by #link("https://haoqifan.github.io/")[Haoqi Fan] -- #emph[Beijing, China] (#emph[July 2025 – present])
+
     #v(-design-text-leading)
+    #v(design-highlights-top-margin);#highlights([#strong[Seedream 5.0]:
 
-    #v(design-highlights-top-margin);#highlights([Alleviating Janus problem in optimization-based 3D generation methods. \(CVPR 2024 \[3\]\)],[Finetune video diffusion model for 3D generation.],[Native 3D generation using limited 3D data. \(CVPR 2025 Highlight \[1\]\)],)
+ 
+
+    - Designed the structured prompt \(SP\) annotation pipeline and verified the effectiveness of SP on DiT.
+
+ 
+
+    - Trained the prompter rewriting user prompts into SPs, exploring reward models, RL recipes, self-distillation, and thinking patterns.
+
+ 
+
+    - Built the editing SP data pipeline, mining supervision from video and extending structured prompts from generation to instruction-based editing.
+
+],[#strong[Scaling Properties of Text Conditioning in Visual Generation] \[1\]:
+
+ 
+
+    - Showed that scaling visual generation means scaling caption informativeness and the LLM that produces it, not the DiT alone.
+
+ 
+
+    - Across 15 controlled runs with data, architecture, and compute fixed, converged diffusion loss tracks caption informativeness, not caption length.
+
+ 
+
+    - Proposed the diffusability × promptability decomposition of the caption interface, separating what the diffuser can use from what an LLM can instantiate.
+
+],[#strong[Open-sourced unified model and data engine]:
+
+ 
+
+    - Co-led LightFusion \[3\], fusing off-the-shelf generation and understanding models via interleaved multimodal self-attention: 0.91 GenEval and 82.16 DPG-Bench on \~35B tokens.
+
+ 
+
+    - Co-led VQ-VA World \[2\], an agentic pipeline crawling \~1.8M interleaved image-text samples plus the IntelligentBench benchmark, lifting LightFusion from 7.78 to 53.06.
+
+],[#strong[Seed world model] \(ongoing\):
+
+ 
+
+    - Continued training on top of Seedance 2.5.
+
+ 
+
+    - Built the captioning workflow, annotating both event-level and global information.
+
+ 
+
+    - Owned its prompt enhancement model, proposing an offline + online scheme that meets the world model's latency budget.
+
+ 
+
+    - Designed the 4D structured prompt and reference-to-world interfaces, giving control through 3D bounding boxes, reference views, and object references.
+
+],[#strong[Negative results]: tested a pretrained ViT as the VAE and a fully discrete unified model, among other alternatives to the continuous latent; none outperformed VAE-based latent diffusion in our settings.],)
   ],
-  right-content: [
-    Beijing, China
+)
 
-Nov 2023 – Mar 2025
+#v(design-entries-vertical-space-between-entries)
+
+#one-col-entry(
+  content: [
+    #strong[Shengshu Inc.], Research intern on video and 3D generation -- #emph[Beijing, China] (#emph[Nov 2023 – Mar 2025])
+
+    #v(-design-text-leading)
+    #v(design-highlights-top-margin);#highlights([Alleviating Janus problem in optimization-based 3D generation methods. \(CVPR 2024 \[6\]\)],[Finetune video diffusion model for 3D generation.],[Native 3D generation using limited 3D data. \(CVPR 2025 Highlight \[4\]\)],)
   ],
 )
 
@@ -543,323 +622,198 @@ Nov 2023 – Mar 2025
 == Publications \(= Indicates Equal Contribution\)
 
 
-#two-col-entry(
-  left-content: [
-    #strong[\[1\] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation]
-
-  ],
-  right-content: [
-    CVPR 2025 \(#strong[Highlight]\)
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[1\] Scaling Properties of Text Conditioning in Visual Generation] -- #emph[ByteDance Seed 2026]
+
+  #v(-design-text-leading)
+#v(design-highlights-top-margin);#strong[#underline[Zilong Chen]], Chaorui Deng, Kunchang Li, Hongyi Yuan, Haoqi Fan
+
+#v(design-highlights-top-margin - design-text-leading)#link("https://heheyas.github.io/context-scaling/")[heheyas.github.io/context-scaling]])
+
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(content:[
+  #strong[\[2\] VQ-VA World: Towards High-Quality Visual Question-Visual Answering] -- #emph[CVPR 2026]
+
+  #v(-design-text-leading)
+#v(design-highlights-top-margin);Chenhui Gou=, #strong[#underline[Zilong Chen]=], Zeyu Wang=, Feng Li, Deyao Zhu, Zicheng Duan, Kunchang Li, Chaorui Deng, Hongyi Yuan, Haoqi Fan, Cihang Xie, Jianfei Cai, Hamid Rezatofighi
+
+#v(design-highlights-top-margin - design-text-leading)#link("https://chenhuigou.github.io/VQ-VA-World/")[chenhuigou.github.io/VQ-VA-World]])
+
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(content:[
+  #strong[\[3\] LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation] -- #emph[ECCV 2026]
+
+  #v(-design-text-leading)
+#v(design-highlights-top-margin);Zeyu Wang=, #strong[#underline[Zilong Chen]=], Chenhui Gou=, Feng Li, Chaorui Deng, Deyao Zhu, Kunchang Li, Weihao Yu, Haoqin Tu, Haoqi Fan, Cihang Xie
+
+#v(design-highlights-top-margin - design-text-leading)#link("https://arxiv.org/abs/2510.22946")[arxiv.org/abs/2510.22946]])
+
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(content:[
+  #strong[\[4\] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder and Generative Data Augmentation] -- #emph[CVPR 2025 \(#strong[Highlight]\)]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);#strong[#underline[Zilong Chen]], Yikai Wang, Wenqiang Sun, Feng Wang, Yiwen Chen, Huaping Liu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://heheyas.github.io/MeshGen")[heheyas.github.io/MeshGen]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[2\] V3d: Video diffusion models are effective 3D generators]
-
-  ],
-  right-content: [
-    T-PAMI 2025
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[5\] V3D: Video Diffusion Models Are Effective 3D Generators] -- #emph[T-PAMI 2025]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);#strong[#underline[Zilong Chen]], Yikai Wang, Feng Wang, Zhengyi Wang, Huaping Liu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://heheyas.github.io/V3D")[heheyas.github.io/V3D]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[3\] Text-to-3d using gaussian splatting]
-
-  ],
-  right-content: [
-    CVPR 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[6\] Text-to-3D Using Gaussian Splatting] -- #emph[CVPR 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);#strong[#underline[Zilong Chen]], Feng Wang, Yikai Wang, Huaping Liu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://gsgen3d.github.io/")[gsgen3d.github.io]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[4\] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting]
-
-  ],
-  right-content: [
-    CVPR 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[7\] GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting] -- #emph[CVPR 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Yiwen Chen=, #strong[#underline[Zilong Chen]=], Chi Zhang, Feng Wang, Xiaofeng Yang, Yikai Wang, Zhongang Cai, Lei Yang, Huaping Liu, Guosheng Lin
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://buaacyw.github.io/gaussian-editor/")[buaacyw.github.io/gaussian-editor]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[5\] Masked space-time hash encoding for efficient dynamic scene reconstruction]
-
-  ],
-  right-content: [
-    NeurIPS 2023 \(#strong[Spotlight]\)
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[8\] Masked Space-Time Hash Encoding for Efficient Dynamic Scene Reconstruction] -- #emph[NeurIPS 2023 \(#strong[Spotlight]\)]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Feng Wang=, #strong[#underline[Zilong Chen]=], Guokang Wang, Yafei Song, Huaping Liu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://masked-spacetime-hashing.github.io/")[masked-spacetime-hashing.github.io]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[6\] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization]
-
-  ],
-  right-content: [
-    T-PAMI 2025
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[9\] Video4DGen: Enhancing Video and 4D Generation Through Mutual Optimization] -- #emph[T-PAMI 2025]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Yikai Wang, Guangce Liu, Xinzhou Wang, #strong[#underline[Zilong Chen]], Jiafang Li, Xin Liang, Fuchun Sun, Jun Zhu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://vidu4d-dgs.github.io/")[vidu4d-dgs.github.io]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[7\] Vidu4d: Single generated video to high-fidelity 4d reconstruction with dynamic gaussian surfels]
-
-  ],
-  right-content: [
-    NeurIPS 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[10\] Vidu4D: Single Generated Video to High-Fidelity 4D Reconstruction with Dynamic Gaussian Surfels] -- #emph[NeurIPS 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Yikai Wang, Xinzhou Wang, #strong[#underline[Zilong Chen]], Zhengyi Wang, Fuchun Sun, Jun Zhu
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://vidu4d-dgs.github.io/")[vidu4d-dgs.github.io]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[8\] Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization]
-
-  ],
-  right-content: [
-    arxiv 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[11\] MeshAnything V2: Artist-Created Mesh Generation with Adjacent Mesh Tokenization] -- #emph[arXiv 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Yiwen Chen, Yikai Wang, Yihao Luo, Zhengyi Wang, #strong[#underline[Zilong Chen]], Jun Zhu, Chi Zhang, Guosheng Lin
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://buaacyw.github.io/meshanything-v2/")[buaacyw.github.io/meshanything-v2]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[9\] Dimensionx: Create any 3d and 4d scenes from a single image with controllable video diffusion]
-
-  ],
-  right-content: [
-    arxiv 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[12\] DimensionX: Create Any 3D and 4D Scenes from a Single Image with Controllable Video Diffusion] -- #emph[arXiv 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Wenqiang Sun, Shuo Chen, Fangfu Liu, #strong[#underline[Zilong Chen]], Yueqi Duan, Jun Zhang, Yikai Wang
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://chenshuo20.github.io/DimensionX/")[chenshuo20.github.io/DimensionX]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[10\] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models]
-
-  ],
-  right-content: [
-    arxiv 2024
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[13\] FreePlane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction Models] -- #emph[arXiv 2024]
+
+  #v(-design-text-leading)
 #v(design-highlights-top-margin);Wenqiang Sun, Zhengyi Wang, Shuo Chen, Yikai Wang, #strong[#underline[Zilong Chen]], Jun Zhu, Jun Zhang
 
 #v(design-highlights-top-margin - design-text-leading)#link("https://freeplane3d.github.io/")[freeplane3d.github.io]])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[11\] Twibot-22: Towards graph-based twitter bot detection]
-
-  ],
-  right-content: [
-    NeurIPS 2022
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[14\] TwiBot-22: Towards Graph-Based Twitter Bot Detection] -- #emph[NeurIPS 2022]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Shangbin Feng=, Zhaoxuan Tan=, Herun Wan=, Ningnan Wang=, #strong[#underline[Zilong Chen]=], Binchi Zhang=, Qinghua Zheng, Wenqian Zhang, Zhenyu Lei, Shujie Yang, others])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[12\] Knowledge graph augmented political perspective detection in news media]
-
-  ],
-  right-content: [
-    arxiv 2021
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[15\] Knowledge Graph Augmented Political Perspective Detection in News Media] -- #emph[arXiv 2021]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Shangbin Feng, #strong[#underline[Zilong Chen]], Qingyao Li, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[13\] Encoding heterogeneous social and political context for entity stance prediction]
-
-  ],
-  right-content: [
-    arxiv 2021
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[16\] Encoding Heterogeneous Social and Political Context for Entity Stance Prediction] -- #emph[arXiv 2021]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Shangbin Feng, #strong[#underline[Zilong Chen]], Peisheng Yu, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[14\] KCD: Knowledge walks and textual cues enhanced political perspective detection in news media]
-
-  ],
-  right-content: [
-    NAACL 2022 \(#strong[Oral]\)
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[17\] KCD: Knowledge Walks and Textual Cues Enhanced Political Perspective Detection in News Media] -- #emph[NAACL 2022 \(#strong[Oral]\)]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Wenqian Zhang=, Shangbin Feng=, #strong[#underline[Zilong Chen]=], Zhenyu Lei, Jundong Li, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[15\] BIC: Twitter bot detection with text-graph interaction and semantic consistency]
-
-  ],
-  right-content: [
-    ACL 2023
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[18\] BIC: Twitter Bot Detection with Text-Graph Interaction and Semantic Consistency] -- #emph[ACL 2023]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Zhenyu Lei, Herun Wan, Wenqian Zhang, Shangbin Feng, #strong[#underline[Zilong Chen]], Jundong Li, Qinghua Zheng, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[16\] KRACL: Contrastive learning with graph context modeling for sparse knowledge graph completion]
-
-  ],
-  right-content: [
-    WWW 2023
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[19\] KRACL: Contrastive Learning with Graph Context Modeling for Sparse Knowledge Graph Completion] -- #emph[WWW 2023]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Zhaoxuan Tan, #strong[#underline[Zilong Chen]], Shangbin Feng, Qingyue Zhang, Qinghua Zheng, Jundong Li, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[17\] Kgap: Knowledge graph augmented political perspective detection in news media]
-
-  ],
-  right-content: [
-    arxiv 2021
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[20\] KGAP: Knowledge Graph Augmented Political Perspective Detection in News Media] -- #emph[arXiv 2021]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Shangbin Feng, #strong[#underline[Zilong Chen]], Wenqian Zhang, Qingyao Li, Qinghua Zheng, Xiaojun Chang, Minnan Luo])
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[\[18\] PAR: Political Actor Representation Learning with Social Context and Expert Knowledge]
-
-  ],
-  right-content: [
-    EMNLP 2022
-  ],
-)
 #one-col-entry(content:[
+  #strong[\[21\] PAR: Political Actor Representation Learning with Social Context and Expert Knowledge] -- #emph[EMNLP 2022]
+
+  #v(-design-text-leading)
   #v(design-highlights-top-margin);Shangbin Feng, Zhaoxuan Tan, #strong[#underline[Zilong Chen]], Ningnan Wang, Peisheng Yu, Qinghua Zheng, Xiaojun Chang, Minnan Luo])
-
-
-
-== Projects
-
-
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/heheyas/gaussian_splatting_3d")[#strong[3D Gaussian Splatting]]
-  ],
-  right-content: [
-    2024
-  ],
-)
-#one-col-entry(
-  content: [
-    #v(design-highlights-top-margin);#highlights([Implementing 3D Gaussian Splatting using pure CUDA.],[Support my own researches on 3D Gaussian Splatting related topics.],)
-  ],
-)
-
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/WangFeng18/Segment-Anything-in-NeRF")[#strong[Segment Anything in NeRF]]
-  ],
-  right-content: [
-    2024
-  ],
-)
-#one-col-entry(
-  content: [
-    #v(design-highlights-top-margin);#highlights([Extending Segment Anything to 3D scenes with NeRF and support natural language prompt with CLip-Seg.],[Using depth-based point prompt for accurate 3D point prompting.],)
-  ],
-)
 
 
 
 == Awards
 
 
-#two-col-entry(
-  left-content: [
-    #strong[Huiyan Scholarship \(Tsinghua University\)]
-  ],
-  right-content: [
-    2024
-  ],
-)
+
 #one-col-entry(
   content: [
+    #strong[Huiyan Scholarship \(Tsinghua University\)] (#emph[2024])
+
     
   ],
 )
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[Track winner, BMW hackthon]
-  ],
-  right-content: [
-    2023
-  ],
-)
+
 #one-col-entry(
   content: [
+    #strong[Track winner, BMW hackathon] (#emph[2023])
+
     
   ],
 )
@@ -874,7 +828,7 @@ Nov 2023 – Mar 2025
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Software:] Blender, LaTeX]
+  content: [#strong[Software:] Blender]
 )
 
 

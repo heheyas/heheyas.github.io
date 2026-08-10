@@ -13,7 +13,7 @@ cv:
       username: 2pbka1gAAAAJ
   sections:
     summary:
-      - "I am interested in multimodal generation. Previously, my primary research focused on 3D reconstruction and generation. I am a Ph.D student at Department of Computer Science and Technology, Tsinghua University, where I am advised by [Prof. Huaping Liu](https://sites.google.com/site/thuliuhuaping). Before joining Tsinghua University, I completed my undergraduate studies at Xi'an Jiaotong University under the supervision of [Prof. Minnan Luo](https://gr.xjtu.edu.cn/web/minnluo), focusing on knowledge graphs and their applications in natural language processing."
+      - "I work on multimodal generation, currently on turning the text interface of a generative model into something that can be measured and scaled. My earlier work covers 3D and 4D reconstruction and generation, including text-to-3D with Gaussian splatting, video diffusion models as 3D generators, and native mesh generation, published at CVPR, NeurIPS, and T-PAMI. Before Tsinghua I worked on knowledge graphs and their applications in natural language processing."
     education:
       - institution: Tsinghua University
         area: Computer Science
@@ -32,17 +32,85 @@ cv:
           # - 'GPA: 3.9/4.0 ([Transcript](https://example.com))'
           - "Advisor: [Minnan Luo](https://gr.xjtu.edu.cn/web/minnluo)"
     experience:
+      - company: ByteDance Seed.
+        position: Top Seed intern on multimodal generation, led by [Haoqi Fan](https://haoqifan.github.io/)
+        location: Beijing, China
+        start_date: 2025-07
+        end_date: present
+        highlights:
+          - |
+            **Seedream 5.0**:
+              - Designed the structured prompt (SP) annotation pipeline and verified the effectiveness of SP on DiT.
+              - Trained the prompter rewriting user prompts into SPs, exploring reward models, RL recipes, self-distillation, and thinking patterns.
+              - Built the editing SP data pipeline, mining supervision from video and extending structured prompts from generation to instruction-based editing.
+          - |
+            **Scaling Properties of Text Conditioning in Visual Generation** [1]:
+              - Showed that scaling visual generation means scaling caption informativeness and the LLM that produces it, not the DiT alone.
+              - Across 15 controlled runs with data, architecture, and compute fixed, converged diffusion loss tracks caption informativeness, not caption length.
+              - Proposed the diffusability × promptability decomposition of the caption interface, separating what the diffuser can use from what an LLM can instantiate.
+          - |
+            **Open-sourced unified model and data engine**:
+              - Co-led LightFusion [3], fusing off-the-shelf generation and understanding models via interleaved multimodal self-attention: 0.91 GenEval and 82.16 DPG-Bench on ~35B tokens.
+              - Co-led VQ-VA World [2], an agentic pipeline crawling ~1.8M interleaved image-text samples plus the IntelligentBench benchmark, lifting LightFusion from 7.78 to 53.06.
+          - |
+            **Seed world model** (ongoing):
+              - Continued training on top of Seedance 2.5.
+              - Built the captioning workflow, annotating both event-level and global information.
+              - Owned its prompt enhancement model, proposing an offline + online scheme that meets the world model's latency budget.
+              - Designed the 4D structured prompt and reference-to-world interfaces, giving control through 3D bounding boxes, reference views, and object references.
+          - "**Negative results**: tested a pretrained ViT as the VAE and a fully discrete unified model, among other alternatives to the continuous latent; none outperformed VAE-based latent diffusion in our settings."
       - company: Shengshu Inc.
         position: Research intern on video and 3D generation
         location: Beijing, China
         start_date: 2023-11
         end_date: 2025-03
         highlights:
-          - Alleviating Janus problem in optimization-based 3D generation methods. (CVPR 2024 [3])
+          - Alleviating Janus problem in optimization-based 3D generation methods. (CVPR 2024 [6])
           - Finetune video diffusion model for 3D generation.
-          - Native 3D generation using limited 3D data. (CVPR 2025 Highlight [1])
+          - Native 3D generation using limited 3D data. (CVPR 2025 Highlight [4])
     publications (= indicates equal contribution):
-      - title: '[1] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
+      - title: '[1] Scaling Properties of Text Conditioning in Visual Generation'
+        authors:
+        - '**#underline[Zilong Chen]**'
+        - Chaorui Deng
+        - Kunchang Li
+        - Hongyi Yuan
+        - Haoqi Fan
+        date: ByteDance Seed 2026
+        url: https://heheyas.github.io/context-scaling/
+      - title: '[2] VQ-VA World: Towards High-Quality Visual Question-Visual Answering'
+        authors:
+        - Chenhui Gou=
+        - '**#underline[Zilong Chen]=**'
+        - Zeyu Wang=
+        - Feng Li
+        - Deyao Zhu
+        - Zicheng Duan
+        - Kunchang Li
+        - Chaorui Deng
+        - Hongyi Yuan
+        - Haoqi Fan
+        - Cihang Xie
+        - Jianfei Cai
+        - Hamid Rezatofighi
+        date: CVPR 2026
+        url: https://chenhuigou.github.io/VQ-VA-World/
+      - title: '[3] LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation'
+        authors:
+        - Zeyu Wang=
+        - '**#underline[Zilong Chen]=**'
+        - Chenhui Gou=
+        - Feng Li
+        - Chaorui Deng
+        - Deyao Zhu
+        - Kunchang Li
+        - Weihao Yu
+        - Haoqin Tu
+        - Haoqi Fan
+        - Cihang Xie
+        date: ECCV 2026
+        url: https://arxiv.org/abs/2510.22946
+      - title: '[4] MeshGen: Generating PBR Textured Mesh with Render-Enhanced Auto-Encoder
           and Generative Data Augmentation'
         authors:
         - '**#underline[Zilong Chen]**'
@@ -53,16 +121,16 @@ cv:
         - Huaping Liu
         date: CVPR 2025 (**Highlight**)
         url: https://heheyas.github.io/MeshGen
-      - title: '[2] V3d: Video diffusion models are effective 3d generators'
+      - title: '[5] V3D: Video Diffusion Models Are Effective 3D Generators'
         authors:
         - '**#underline[Zilong Chen]**'
         - Yikai Wang
         - Feng Wang
         - Zhengyi Wang
         - Huaping Liu
-        date: Submitted to T-PAMI 2024
+        date: T-PAMI 2025
         url: https://heheyas.github.io/V3D
-      - title: '[3] Text-to-3d using gaussian splatting'
+      - title: '[6] Text-to-3D Using Gaussian Splatting'
         authors:
         - '**#underline[Zilong Chen]**'
         - Feng Wang
@@ -70,7 +138,7 @@ cv:
         - Huaping Liu
         date: CVPR 2024
         url: https://gsgen3d.github.io/
-      - title: '[4] Gaussianeditor: Swift and controllable 3d editing with gaussian splatting'
+      - title: '[7] GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting'
         authors:
         - Yiwen Chen=
         - '**#underline[Zilong Chen]=**'
@@ -84,7 +152,7 @@ cv:
         - Guosheng Lin
         date: CVPR 2024
         url: https://buaacyw.github.io/gaussian-editor/
-      - title: '[5] Masked space-time hash encoding for efficient dynamic scene reconstruction'
+      - title: '[8] Masked Space-Time Hash Encoding for Efficient Dynamic Scene Reconstruction'
         authors:
         - Feng Wang=
         - '**#underline[Zilong Chen]=**'
@@ -93,7 +161,7 @@ cv:
         - Huaping Liu
         date: NeurIPS 2023 (**Spotlight**)
         url: https://masked-spacetime-hashing.github.io/
-      - title: '[6] Video4DGen: Enhancing Video and 4D Generation through Mutual Optimization'
+      - title: '[9] Video4DGen: Enhancing Video and 4D Generation Through Mutual Optimization'
         authors:
         - Yikai Wang
         - Guangce Liu
@@ -105,8 +173,8 @@ cv:
         - Jun Zhu
         date: T-PAMI 2025
         url: https://vidu4d-dgs.github.io/
-      - title: '[7] Vidu4d: Single generated video to high-fidelity 4d reconstruction with
-          dynamic gaussian surfels'
+      - title: '[10] Vidu4D: Single Generated Video to High-Fidelity 4D Reconstruction with
+          Dynamic Gaussian Surfels'
         authors:
         - Yikai Wang
         - Xinzhou Wang
@@ -116,7 +184,8 @@ cv:
         - Jun Zhu
         date: NeurIPS 2024
         url: https://vidu4d-dgs.github.io/
-      - title: '[8] Meshanything v2: Artist-created mesh generation with adjacent mesh tokenization'
+      - title: '[11] MeshAnything V2: Artist-Created Mesh Generation with Adjacent Mesh
+          Tokenization'
         authors:
         - Yiwen Chen
         - Yikai Wang
@@ -126,10 +195,10 @@ cv:
         - Jun Zhu
         - Chi Zhang
         - Guosheng Lin
-        date: arxiv 2024
+        date: arXiv 2024
         url: https://buaacyw.github.io/meshanything-v2/
-      - title: '[9] Dimensionx: Create any 3d and 4d scenes from a single image with controllable
-          video diffusion'
+      - title: '[12] DimensionX: Create Any 3D and 4D Scenes from a Single Image with Controllable
+          Video Diffusion'
         authors:
         - Wenqiang Sun
         - Shuo Chen
@@ -138,9 +207,9 @@ cv:
         - Yueqi Duan
         - Jun Zhang
         - Yikai Wang
-        date: arxiv 2024
+        date: arXiv 2024
         url: https://chenshuo20.github.io/DimensionX/
-      - title: '[10] Freeplane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
+      - title: '[13] FreePlane: Unlocking Free Lunch in Triplane-Based Sparse-View Reconstruction
           Models'
         authors:
         - Wenqiang Sun
@@ -150,9 +219,9 @@ cv:
         - '**#underline[Zilong Chen]**'
         - Jun Zhu
         - Jun Zhang
-        date: arxiv 2024
+        date: arXiv 2024
         url: https://freeplane3d.github.io/
-      - title: '[11] Twibot-22: Towards graph-based twitter bot detection'
+      - title: '[14] TwiBot-22: Towards Graph-Based Twitter Bot Detection'
         authors:
         - Shangbin Feng=
         - Zhaoxuan Tan=
@@ -166,23 +235,23 @@ cv:
         - Shujie Yang
         - others
         date: NeurIPS 2022
-      - title: '[12] Knowledge graph augmented political perspective detection in news media'
+      - title: '[15] Knowledge Graph Augmented Political Perspective Detection in News Media'
         authors:
         - Shangbin Feng
         - '**#underline[Zilong Chen]**'
         - Qingyao Li
         - Minnan Luo
-        date: arxiv 2021
-      - title: '[13] Encoding heterogeneous social and political context for entity stance
-          prediction'
+        date: arXiv 2021
+      - title: '[16] Encoding Heterogeneous Social and Political Context for Entity Stance
+          Prediction'
         authors:
         - Shangbin Feng
         - '**#underline[Zilong Chen]**'
         - Peisheng Yu
         - Minnan Luo
-        date: arxiv 2021
-      - title: '[14] KCD: Knowledge walks and textual cues enhanced political perspective
-          detection in news media'
+        date: arXiv 2021
+      - title: '[17] KCD: Knowledge Walks and Textual Cues Enhanced Political Perspective
+          Detection in News Media'
         authors:
         - Wenqian Zhang=
         - Shangbin Feng=
@@ -191,8 +260,8 @@ cv:
         - Jundong Li
         - Minnan Luo
         date: NAACL 2022 (**Oral**)
-      - title: '[15] BIC: Twitter bot detection with text-graph interaction and semantic
-          consistency'
+      - title: '[18] BIC: Twitter Bot Detection with Text-Graph Interaction and Semantic
+          Consistency'
         authors:
         - Zhenyu Lei
         - Herun Wan
@@ -203,8 +272,8 @@ cv:
         - Qinghua Zheng
         - Minnan Luo
         date: ACL 2023
-      - title: '[16] KRACL: Contrastive learning with graph context modeling for sparse
-          knowledge graph completion'
+      - title: '[19] KRACL: Contrastive Learning with Graph Context Modeling for Sparse
+          Knowledge Graph Completion'
         authors:
         - Zhaoxuan Tan
         - '**#underline[Zilong Chen]**'
@@ -214,8 +283,8 @@ cv:
         - Jundong Li
         - Minnan Luo
         date: WWW 2023
-      - title: '[17] Kgap: Knowledge graph augmented political perspective detection in
-          news media'
+      - title: '[20] KGAP: Knowledge Graph Augmented Political Perspective Detection in
+          News Media'
         authors:
         - Shangbin Feng
         - '**#underline[Zilong Chen]**'
@@ -224,8 +293,8 @@ cv:
         - Qinghua Zheng
         - Xiaojun Chang
         - Minnan Luo
-        date: arxiv 2021
-      - title: '[18] PAR: Political Actor Representation Learning with Social Context and
+        date: arXiv 2021
+      - title: '[21] PAR: Political Actor Representation Learning with Social Context and
           Expert Knowledge'
         authors:
         - Shangbin Feng
@@ -237,26 +306,34 @@ cv:
         - Xiaojun Chang
         - Minnan Luo
         date: EMNLP 2022
-    projects:
-      - name: "[3D Gaussian Splatting](https://github.com/heheyas/gaussian_splatting_3d)"
-        date: '2024'
-        highlights:
-          - Implementing 3D Gaussian Splatting using pure CUDA.
-          - Support my own researches on 3D Gaussian Splatting related topics.
-      - name: "[Segment Anything in NeRF](https://github.com/WangFeng18/Segment-Anything-in-NeRF)"
-        date: '2024'
-        highlights:
-          - Extending Segment Anything to 3D scenes with NeRF and support natural language prompt with CLip-Seg.
-          - Using depth-based point prompt for accurate 3D point prompting.
     awards:
       - name: Huiyan Scholarship (Tsinghua University)
         date: '2024'
-      - name: Track winner, BMW hackthon
+      - name: Track winner, BMW hackathon
         date: '2023'
     technologies:
       - label: Languages
         details: C++, C, CUDA, Python
       - label: Software
-        details: Blender, LaTeX
+        details: Blender
 design:
   theme: classic
+  entries:
+    # Dates are inlined into each entry's first row (below), so the right-hand
+    # date column is collapsed and the text spans the full page width.
+    date_and_location_width: 0.01cm
+    horizontal_space_between_columns: 0cm
+    left_and_right_margin: 0.1cm
+  entry_types:
+    experience_entry:
+      main_column_first_row_template: '**COMPANY**, POSITION -- *LOCATION* (*DATE*)'
+      date_and_location_column_template: ' '
+    education_entry:
+      main_column_first_row_template: '**INSTITUTION**, AREA (*DATE*)'
+      date_and_location_column_template: ' '
+    publication_entry:
+      main_column_first_row_template: '**TITLE** -- *DATE*'
+      date_and_location_column_template: ' '
+    normal_entry:
+      main_column_first_row_template: '**NAME** (*DATE*)'
+      date_and_location_column_template: ' '
